@@ -1,0 +1,22 @@
+#ifndef _INTERRUPTS_H_
+#define _INTERRUPTS_H_
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
+#include "definitions.h"    
+
+typedef struct {
+    unsigned char data[HORIZONTAL_BYTES_MAX] [VERTICAL_LINES_MAX];
+} DisplayFrame_t;
+    
+void Interrupt__Setup(void);
+void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
+unsigned char Interrupt__IsFrameEnd();
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif //_INTERRUPTS_H_
+
