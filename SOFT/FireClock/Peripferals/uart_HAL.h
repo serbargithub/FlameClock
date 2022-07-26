@@ -28,7 +28,6 @@ void putch(char c);
 
 
 
-
 #ifdef	__cplusplus
 }
 #endif

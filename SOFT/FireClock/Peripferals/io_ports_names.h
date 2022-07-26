@@ -13,8 +13,8 @@ extern "C" {
 #define BUCK_UP2_OUT     _RB7		//>
 #define POWER_SENSOR_IN  _RB12		//<
 
-#define RX_UART1		_RD4		//<[RP25]
-#define TX_UART1		_RD5		//>[RP20]
+#define TX_UART1		_RD4		//>[RP25]
+#define RX_UART1		_RD5		//<[RP20]
 #define DISPLAY_SDO		_RD9		//>[RP4]
 #define DISPLAY_SCK		_RD10		//<[RP3]
 #define DISPLAY_LATCH	_RD11		//>       
@@ -32,7 +32,7 @@ extern "C" {
 
 #define  MASK_PORTB 	0b1111111100011111
 #define  MASK_PORTC    	0xFFFF  
-#define  MASK_PORTD    	0b1111010111011111  
+#define  MASK_PORTD    	0b1111010111101111  
 #define  MASK_PORTE    	0b1111111111011111  
 #define  MASK_PORTG    	0xFFFF  
 #define  MASK_PORTF    	0xFFFF  

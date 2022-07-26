@@ -3,7 +3,7 @@
 //-----------------------------------------
 
 void HAL_SPI__Init(void) {
-    SPI1CON1 = 0x013E; //freq divided by 16
+    SPI1CON1 = 0x013F; //freq divided 3D by 16  3E by 8
     SPI1STAT = 0x8000;
 }
 

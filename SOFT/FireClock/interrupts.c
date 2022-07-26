@@ -13,12 +13,15 @@ static unsigned char g_EndOfFrame;
 
 void _ISR_PSV _T1Interrupt(void) {
 
+    
     static unsigned char countH, countV;
-
-    for (countH = 0; countH < HORIZONTAL_BYTES_MAX; countH++) {
-        HAL_SPI__SendByte(g_DisplayFrame.data [countH][countV]);
+    for (countH = HORIZONTAL_BYTES_MAX ; countH > 0; countH--) {
+        HAL_SPI__SendByte(g_DisplayFrame.data [countV][countH - 1]);
     }
-    HAL_SPI__SendByte(countV);
+    unsigned char decHigh = countV/10;
+    unsigned char decLow = countV - decHigh*10;
+    unsigned char sendDec = decHigh<<4 +decLow;
+    HAL_SPI__SendByte(sendDec);
     HAL_PIO__DisplayLatch(PIN_ON);
     HAL_PIO__DisplayLatch(PIN_OFF);
     countV++;
@@ -39,9 +42,10 @@ void _ISR_PSV _T2Interrupt(void) //4000 Ãö
     _T2IF = 0;
 } //T2Interrupt
 
+static char UART1_RX_Data;
+
 void _ISR_PSV _U1RXInterrupt(void) {
-    static unsigned char tempRX;
-    tempRX = U1RXREG;
+    UART1_RX_Data = U1RXREG;
     _U1RXIF = 0;
 }
 //--
@@ -80,7 +84,7 @@ void Interrupt__Setup(void) {
 
     TMR1 = 0; // clear the timer
     TMR2 = 0; // clear the timer
-    PR1 = 3200 - 1; // set the period register 2500 Hz 
+    PR1 = 1000 - 1;//3200 - 1; // set the period register 2500 Hz 
     PR2 = 8000 - 1; // set the period register 1 kHz
     T1CON = 0x8000; // enabled, prescaler 1:1, internal clock  
     T2CON = 0x8000; // enabled, prescaler 1:1, internal clock   system tick RTOS
@@ -107,4 +111,10 @@ unsigned char Interrupt__IsFrameEnd() {
     } else {
         return 0;
     }
+}
+
+char Interrupt__GetUART1RX() {
+    char dataRead = UART1_RX_Data;
+    UART1_RX_Data = 0;
+    return dataRead;
 }

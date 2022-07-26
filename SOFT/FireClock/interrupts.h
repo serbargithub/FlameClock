@@ -7,12 +7,13 @@ extern "C" {
 #include "definitions.h"    
 
 typedef struct {
-    unsigned char data[HORIZONTAL_BYTES_MAX] [VERTICAL_LINES_MAX];
+    unsigned char data[VERTICAL_LINES_MAX][HORIZONTAL_BYTES_MAX];
 } DisplayFrame_t;
     
 void Interrupt__Setup(void);
 void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
 unsigned char Interrupt__IsFrameEnd();
+char Interrupt__GetUART1RX();
 
 #ifdef	__cplusplus
 }
