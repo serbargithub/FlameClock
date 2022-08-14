@@ -22,9 +22,13 @@ typedef enum {
     UART_CH4,
 }UART_Channel_t;
 
+typedef char (*GETCHAR_CALLBACK)(void);
+
+void HAL_UART__SetExternGetch(GETCHAR_CALLBACK getChar);
 void HAL_UART__SerialSetup(UART_Speed_t serialSpeed, UART_Channel_t uartChannel);
-unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel);
+bool HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel);
 void putch(char c);
+char getch(void);
 
 
 

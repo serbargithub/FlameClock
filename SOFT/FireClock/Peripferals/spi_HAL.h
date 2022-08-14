@@ -6,8 +6,8 @@ extern "C" {
 #endif
 
 void HAL_SPI__Init(void);
-unsigned char HAL_SPI__SendByte(char);
-unsigned char HAL_SPI__GetByte(void);
+uint8_t HAL_SPI__SendByte(uint8_t);
+uint8_t HAL_SPI__GetByte(void);
 
 #ifdef	__cplusplus
 }

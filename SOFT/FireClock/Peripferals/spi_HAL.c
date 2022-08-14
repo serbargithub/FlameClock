@@ -7,13 +7,13 @@ void HAL_SPI__Init(void) {
     SPI1STAT = 0x8000;
 }
 
-unsigned char HAL_SPI__SendByte(unsigned char c) {
+uint8_t HAL_SPI__SendByte(uint8_t c) {
     SPI1BUF = c;
     while (!SPI1STATbits.SPIRBF);
     return SPI1BUF;
 }
 
-unsigned char HAL_SPI__GetByte(void) {
+uint8_t HAL_SPI__GetByte(void) {
     return HAL_SPI__SendByte(0);
 }
 

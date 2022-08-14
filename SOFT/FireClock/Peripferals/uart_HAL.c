@@ -1,6 +1,13 @@
 #include <p24Fxxxx.h>
-#include <uart.h>
+#include<stdbool.h>
+#include "uart_24F_definitions.h"
 #include "uart_HAL.h"
+
+GETCHAR_CALLBACK g_GetchCallBack;
+
+void HAL_UART__SetExternGetch(GETCHAR_CALLBACK getChar) {
+    g_GetchCallBack = getChar;
+}
 
 void HAL_UART__SerialSetup(UART_Speed_t serialSpeed, UART_Channel_t uartChannel) {
 
@@ -78,9 +85,10 @@ void HAL_UART__SerialSetup(UART_Speed_t serialSpeed, UART_Channel_t uartChannel)
     }
 }
 
-unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
+bool HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
 
-    unsigned char temp, errorDetected = 0;
+    unsigned char temp;
+    bool errorDetected = false;
     switch (uartChannel) {
         case UART_CH1:
             if (U1STAbits.FERR) {
@@ -89,7 +97,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
                 U1STAbits.UTXEN = 1;
                 U1STAbits.FERR = 0;
                 temp = U1RXREG;
-                errorDetected = 1;
+                errorDetected = true;
                 U1STAbits.FERR = 0;
             }
             if (!U1STAbits.OERR) {
@@ -101,7 +109,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
             temp = U1RXREG;
             temp = U1RXREG;
             U1STAbits.OERR = 0;
-            errorDetected = 1;
+            errorDetected = true;
             break;
         case UART_CH2:
             if (U2STAbits.FERR) {
@@ -110,7 +118,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
                 U2STAbits.UTXEN = 1;
                 U2STAbits.FERR = 0;
                 temp = U2RXREG;
-                errorDetected = 1;
+                errorDetected = true;
                 U2STAbits.FERR = 0;
             }
             if (!U2STAbits.OERR) {
@@ -123,7 +131,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
             temp = U2RXREG;
             temp = U2RXREG;
             U2STAbits.OERR = 0;
-            errorDetected = 1;
+            errorDetected = true;
             break;
         case UART_CH3:
             if (U3STAbits.FERR) {
@@ -132,7 +140,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
                 U3STAbits.UTXEN = 1;
                 U3STAbits.FERR = 0;
                 temp = U3RXREG;
-                errorDetected = 1;
+                errorDetected = true;
                 U3STAbits.FERR = 0;
             }
             if (!U3STAbits.OERR) {
@@ -145,7 +153,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
             temp = U3RXREG;
             temp = U3RXREG;
             U3STAbits.OERR = 0;
-            errorDetected = 1;
+            errorDetected = true;
             break;
         case UART_CH4:
             if (U4STAbits.FERR) {
@@ -154,7 +162,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
                 U4STAbits.UTXEN = 1;
                 U4STAbits.FERR = 0;
                 temp = U4RXREG;
-                errorDetected = 1;
+                errorDetected = true;
                 U4STAbits.FERR = 0;
             }
             if (!U4STAbits.OERR) {
@@ -167,7 +175,7 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
             temp = U4RXREG;
             temp = U4RXREG;
             U4STAbits.OERR = 0;
-            errorDetected = 1;
+            errorDetected = true;
             break;
         default:
             break;
@@ -178,8 +186,15 @@ unsigned char HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
 void putch(char c) {
 
     while (U1STAbits.UTXBF) {
-        ClrWdt();
+//        ClrWdt();
     }
     U1TXREG = c;
 }
 
+char getch(void) {
+    
+//    if (g_GetchCallBack == NULL){
+//      return 0; 
+//    }
+    return g_GetchCallBack();
+}

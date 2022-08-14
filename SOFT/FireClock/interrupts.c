@@ -1,33 +1,42 @@
 #include <p24Fxxxx.h>
+#include <stdint.h>
+#include <stdbool.h>
 #include <string.h>
 #include "interrupts.h"
 #include "Peripferals/peripherals_HAL.h"
+#include "Peripferals/spi_HAL.h"
 
 #define _ISR_PSV __attribute__((interrupt, auto_psv))
 #define _ISR_NO_PSV __attribute__(interrupt, no_auto_psv))
 
 static DisplayFrame_t g_DisplayFrame;
-static unsigned char g_EndOfFrame;
+static bool g_EndOfFrameFlag;
 
 //================================================
 
 void _ISR_PSV _T1Interrupt(void) {
 
-    
-    static unsigned char countH, countV;
-    for (countH = HORIZONTAL_BYTES_MAX ; countH > 0; countH--) {
-        HAL_SPI__SendByte(g_DisplayFrame.data [countV][countH - 1]);
+
+    static uint8_t countV;
+    for (int8_t countH = (HORIZONTAL_BYTES_MAX - 1); countH >= 0; countH--) {
+        unsigned char byteToSend = g_DisplayFrame.data [countV][countH] / 16;
+        if (countH > 0) {
+            byteToSend |= g_DisplayFrame.data [countV][countH - 1] * 16;
+        }
+        HAL_SPI__SendByte(byteToSend);
     }
-    unsigned char decHigh = countV/10;
-    unsigned char decLow = countV - decHigh*10;
-    unsigned char sendDec = decHigh<<4 +decLow;
+    uint8_t decHigh = countV / 10;
+    uint8_t decLow = countV - decHigh * 10;
+    uint8_t sendDec = decHigh * 16 + decLow;
     HAL_SPI__SendByte(sendDec);
+
+    // HAL_SPI__SendByte(countV);
     HAL_PIO__DisplayLatch(PIN_ON);
     HAL_PIO__DisplayLatch(PIN_OFF);
     countV++;
-    if (countV >= VERTICAL_LINES_MAX) {
+    if (countV > VERTICAL_LINES_MAX) {
         countV = 0;
-        g_EndOfFrame = 1;
+        g_EndOfFrameFlag = true;
     }
 
     _T1IF = 0;
@@ -84,7 +93,7 @@ void Interrupt__Setup(void) {
 
     TMR1 = 0; // clear the timer
     TMR2 = 0; // clear the timer
-    PR1 = 1000 - 1;//3200 - 1; // set the period register 2500 Hz 
+    PR1 = 1580 - 1; //3200 - 1; // set the period register 2500 Hz 
     PR2 = 8000 - 1; // set the period register 1 kHz
     T1CON = 0x8000; // enabled, prescaler 1:1, internal clock  
     T2CON = 0x8000; // enabled, prescaler 1:1, internal clock   system tick RTOS
@@ -100,17 +109,19 @@ void Interrupt__Setup(void) {
     _IPL = 0; // this is the default value anyway
 }
 
-void Interrupt__ShowFrame(DisplayFrame_t* displayFrame) {
-    memcpy(&g_DisplayFrame, displayFrame, sizeof (DisplayFrame_t));
+bool Interrupt__IsFrameEnd() {
+    if (g_EndOfFrameFlag == true) {
+        g_EndOfFrameFlag = false;
+        return true;
+    } else {
+        return false;
+    }
 }
 
-unsigned char Interrupt__IsFrameEnd() {
-    if (g_EndOfFrame > 0) {
-        g_EndOfFrame = 0;
-        return 1;
-    } else {
-        return 0;
-    }
+void Interrupt__ShowFrame(DisplayFrame_t* displayFrame) {
+    while (Interrupt__IsFrameEnd() == false) {
+    };
+    memcpy(&g_DisplayFrame, displayFrame, sizeof (DisplayFrame_t));
 }
 
 char Interrupt__GetUART1RX() {

@@ -1,18 +1,17 @@
 #include <p24Fxxxx.h>
 
-extern unsigned char cnt_wt;
 
 
 //===============================
 
-void DelayMks(unsigned int timeMks) {
+void DelayMks(uint16_t timeMks) {
     while (timeMks--) {
         asm("nop");
     }
 }
 //-----------------------
 
-void DelayMs(unsigned int timeMs) {
+void DelayMs(uint16_t timeMs) {
     while (timeMs--) {
         DelayMks(1000);
     }

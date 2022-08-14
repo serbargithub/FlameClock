@@ -12,7 +12,7 @@ typedef struct {
     
 void Interrupt__Setup(void);
 void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
-unsigned char Interrupt__IsFrameEnd();
+bool Interrupt__IsFrameEnd();
 char Interrupt__GetUART1RX();
 
 #ifdef	__cplusplus

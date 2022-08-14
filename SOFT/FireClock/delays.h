@@ -5,8 +5,8 @@
 extern "C" {
 #endif
 
-void DelayMs(unsigned int timeMs);
-void DelayMks(unsigned int timeMks);
+void DelayMs(uint16_t timeMs);
+void DelayMks(uint16_t timeMks);
 
 
 #ifdef	__cplusplus
