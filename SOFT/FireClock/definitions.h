@@ -18,7 +18,9 @@ extern "C" {
     
 #define MAX_BUF_RX_COM 254
 
-
+typedef struct {
+    unsigned char data[VERTICAL_LINES_MAX][HORIZONTAL_BYTES_MAX];
+} DisplayFrame_t;
 
 #ifdef	__cplusplus
 }

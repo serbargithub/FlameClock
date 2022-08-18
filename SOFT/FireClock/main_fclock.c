@@ -10,6 +10,8 @@
 #include "Peripferals/spi_HAL.h"
 #include "interrupts.h"
 #include "images/screens_static.h"
+#include "fonts/fonts.h"
+#include "screen.h"
 
 
 // PIC24FJ128GA106
@@ -33,7 +35,8 @@
 #pragma config GCP = OFF 
 #pragma config JTAGEN = OFF 
 
-static DisplayFrame_t g_PreparedFrame;
+static DisplayFrame_t g_PreparedFrame; 
+
 void SendLine(unsigned char countV);
 //****************************************************************************
 
@@ -50,6 +53,7 @@ int main(void) {
     DelayMs(500);
     HAL_PIO__BuckUp2Out(PIN_ON);
 
+    Font_SetCurrentFont(FONT_BEBAS_SIZE30);
     memcpy(g_PreparedFrame.data, HelloWorld, sizeof(HelloWorld));
     Interrupt__ShowFrame(&g_PreparedFrame);
     printf("\r\nStart.");
@@ -72,6 +76,9 @@ int main(void) {
         if (rByte == '1') {
             line = 1;
             memcpy(g_PreparedFrame.data, BlankScreen2, sizeof(BlankScreen2));
+
+            Screen_PutFirstSymbol(&g_PreparedFrame, 5, 30, 'S');
+            
             Interrupt__ShowFrame(&g_PreparedFrame);
         }
         if (rByte == '2') {

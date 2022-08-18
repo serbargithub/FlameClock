@@ -6,9 +6,6 @@ extern "C" {
 #endif
 #include "definitions.h"    
 
-typedef struct {
-    unsigned char data[VERTICAL_LINES_MAX][HORIZONTAL_BYTES_MAX];
-} DisplayFrame_t;
     
 void Interrupt__Setup(void);
 void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
