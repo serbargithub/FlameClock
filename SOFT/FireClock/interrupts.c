@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
+#include "definitions.h" 
 #include "interrupts.h"
 #include "Peripferals/peripherals_HAL.h"
 #include "Peripferals/spi_HAL.h"
@@ -129,3 +130,4 @@ char Interrupt__GetUART1RX() {
     UART1_RX_Data = 0;
     return dataRead;
 }
+

@@ -4,9 +4,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-#include "definitions.h"    
-
     
+#include "definitions.h" 
+   
 void Interrupt__Setup(void);
 void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
 bool Interrupt__IsFrameEnd();

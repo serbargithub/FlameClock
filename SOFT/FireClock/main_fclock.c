@@ -12,6 +12,8 @@
 #include "images/screens_static.h"
 #include "fonts/fonts.h"
 #include "screen.h"
+#include "debugging.h"
+#include "clock_task.h"
 
 
 // PIC24FJ128GA106
@@ -48,91 +50,21 @@ int main(void) {
     HAL_UART__SerialSetup(UART_SPEED_115200, UART_CH1);
     HAL_SPI__Init();
     Interrupt__Setup();
-    DelayMs(500);
+    DelayMs(200);
     HAL_PIO__BuckUp1Out(PIN_ON);
-    DelayMs(500);
+    DelayMs(200);
     HAL_PIO__BuckUp2Out(PIN_ON);
 
-    Font_SetCurrentFont(FONT_BEBAS_SIZE30);
     memcpy(g_PreparedFrame.data, HelloWorld, sizeof(HelloWorld));
     Interrupt__ShowFrame(&g_PreparedFrame);
     printf("\r\nStart.");
     HAL_UART__CheckAndResetErrors(UART_CH1);
+    DelayMs(200);
 
-    uint8_t line = 0;
-    //SendLine(line);
-    while (1) {
-        HAL_PIO__SetInformLed(PIN_ON);
-        DelayMs(500);
-        HAL_PIO__SetInformLed(PIN_OFF);
-        DelayMs(500);
-
-        char rByte = getch();
-        if (rByte == '0') {
-            line = 0;
-            memcpy(g_PreparedFrame.data, BlankScreen1, sizeof(BlankScreen1));
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        if (rByte == '1') {
-            line = 1;
-            memcpy(g_PreparedFrame.data, BlankScreen2, sizeof(BlankScreen2));
-
-            Screen_PutFirstSymbol(&g_PreparedFrame, 5, 30, 'S');
-            
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        if (rByte == '2') {
-            line = 2;
-            memcpy(g_PreparedFrame.data, HelloWorld, sizeof(HelloWorld));
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        if (rByte == '3') {
-            line = 3;
-            memcpy(g_PreparedFrame.data, Pepsi, sizeof(Pepsi));
-            while (Interrupt__IsFrameEnd() == 0) {
-            };
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        
-        if (rByte == '4') {
-            line = 4;
-            memcpy(g_PreparedFrame.data, ArtsStrade, sizeof(ArtsStrade));
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        if (rByte == '5') {
-            line = 5;
-            memcpy(g_PreparedFrame.data, Triden, sizeof(Triden));
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        if (rByte == '6') {
-            line = 6;
-            memcpy(g_PreparedFrame.data, FlameAnimation, sizeof(FlameAnimation) / 5);
-            Interrupt__ShowFrame(&g_PreparedFrame);
-        }
-        printf("\r\nLine: %i", line);
-    }
+    clock_task();
 }
 
 
-
-const uint8_t line1[13] = {0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55};
-const uint8_t line2[13] = {0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa};
-
-void SendLine(uint8_t countV) {
-
-    uint8_t countH;
-    for (countH = 0; countH < HORIZONTAL_BYTES_MAX; countH++) {
-        if (countV & 0x01) {
-            HAL_SPI__SendByte(line1[countH]);
-        } else {
-            HAL_SPI__SendByte(line2[countH]);
-        }
-    }
-    HAL_SPI__SendByte(countV);
-    HAL_PIO__DisplayLatch(PIN_ON);
-    HAL_PIO__DisplayLatch(PIN_OFF);
-
-}
 
 
 //******************************************************************************

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../fonts/BebasNeue-Regular_12_L1.c ../fonts/BebasNeue-Regular_30_L1.c ../fonts/fonts.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../interrupts.c ../main_fclock.c ../delays.c ../screen.c
+SOURCEFILES_QUOTED_IF_SPACED=../fonts/BebasNeue-Regular_30_L1.c ../fonts/fonts.c ../fonts/m12_40_L1.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../interrupts.c ../main_fclock.c ../delays.c ../screen.c ../debugging.c ../fonts/m12_20_L1.c ../clock_task.c ../fonts/BebasNeue-Regular_12_L1.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o ${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/screen.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o.d ${OBJECTDIR}/_ext/2116421387/fonts.o.d ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o.d ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o.d ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o.d ${OBJECTDIR}/_ext/1037427530/uart_HAL.o.d ${OBJECTDIR}/_ext/1037427530/spi_HAL.o.d ${OBJECTDIR}/_ext/1472/interrupts.o.d ${OBJECTDIR}/_ext/1472/main_fclock.o.d ${OBJECTDIR}/_ext/1472/delays.o.d ${OBJECTDIR}/_ext/1472/screen.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o ${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/screen.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o.d ${OBJECTDIR}/_ext/2116421387/fonts.o.d ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o.d ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o.d ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o.d ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o.d ${OBJECTDIR}/_ext/1037427530/uart_HAL.o.d ${OBJECTDIR}/_ext/1037427530/spi_HAL.o.d ${OBJECTDIR}/_ext/1472/interrupts.o.d ${OBJECTDIR}/_ext/1472/main_fclock.o.d ${OBJECTDIR}/_ext/1472/delays.o.d ${OBJECTDIR}/_ext/1472/screen.o.d ${OBJECTDIR}/_ext/1472/debugging.o.d ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d ${OBJECTDIR}/_ext/1472/clock_task.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o ${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/screen.o
+OBJECTFILES=${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o ${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/screen.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o
 
 # Source Files
-SOURCEFILES=../fonts/BebasNeue-Regular_12_L1.c ../fonts/BebasNeue-Regular_30_L1.c ../fonts/fonts.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../interrupts.c ../main_fclock.c ../delays.c ../screen.c
+SOURCEFILES=../fonts/BebasNeue-Regular_30_L1.c ../fonts/fonts.c ../fonts/m12_40_L1.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../interrupts.c ../main_fclock.c ../delays.c ../screen.c ../debugging.c ../fonts/m12_20_L1.c ../clock_task.c ../fonts/BebasNeue-Regular_12_L1.c
 
 
 
@@ -95,12 +95,6 @@ MP_LINKER_FILE_OPTION=,--script=p24FJ128GA106.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o: ../fonts/BebasNeue-Regular_12_L1.c  .generated_files/flags/default/23b514bbbb71f7254a1bba6623ec9b97e44697e7 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
-	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/BebasNeue-Regular_12_L1.c  -o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o: ../fonts/BebasNeue-Regular_30_L1.c  .generated_files/flags/default/ddb09841c8b48a7450dd93495401ec632f006305 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o.d 
@@ -112,6 +106,12 @@ ${OBJECTDIR}/_ext/2116421387/fonts.o: ../fonts/fonts.c  .generated_files/flags/d
 	@${RM} ${OBJECTDIR}/_ext/2116421387/fonts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/fonts.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/fonts.c  -o ${OBJECTDIR}/_ext/2116421387/fonts.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/fonts.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/2116421387/m12_40_L1.o: ../fonts/m12_40_L1.c  .generated_files/flags/default/55f653d3dc37eb06c60729101ff5b7bd3142a9c2 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/m12_40_L1.c  -o ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/m12_40_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o: ../images/HelloWorld_100x100_L1.c  .generated_files/flags/default/c1b7d60d9be9d1e0f81aafbeb823cd95e7cb8597 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1100913241" 
@@ -197,13 +197,31 @@ ${OBJECTDIR}/_ext/1472/screen.o: ../screen.c  .generated_files/flags/default/997
 	@${RM} ${OBJECTDIR}/_ext/1472/screen.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screen.c  -o ${OBJECTDIR}/_ext/1472/screen.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/screen.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-else
-${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o: ../fonts/BebasNeue-Regular_12_L1.c  .generated_files/flags/default/f8d65f241bf2ebf129745b8f8e048ffca4f21954 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+${OBJECTDIR}/_ext/1472/debugging.o: ../debugging.c  .generated_files/flags/default/8447547367b8e2687e36a7b2aed828dccaea041 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/debugging.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/debugging.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../debugging.c  -o ${OBJECTDIR}/_ext/1472/debugging.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/debugging.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/2116421387/m12_20_L1.o: ../fonts/m12_20_L1.c  .generated_files/flags/default/5875f581d15971cc052ff5ac5211262c8cca8696 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/m12_20_L1.c  -o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/1472/clock_task.o: ../clock_task.c  .generated_files/flags/default/fade9acfd7cddd4457d7ed713ac280511bd1d506 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/clock_task.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/clock_task.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../clock_task.c  -o ${OBJECTDIR}/_ext/1472/clock_task.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/clock_task.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o: ../fonts/BebasNeue-Regular_12_L1.c  .generated_files/flags/default/23b514bbbb71f7254a1bba6623ec9b97e44697e7 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/BebasNeue-Regular_12_L1.c  -o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/BebasNeue-Regular_12_L1.c  -o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+else
 ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o: ../fonts/BebasNeue-Regular_30_L1.c  .generated_files/flags/default/714d339335d708738001056b1cb49877b86660a2 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_30_L1.o.d 
@@ -215,6 +233,12 @@ ${OBJECTDIR}/_ext/2116421387/fonts.o: ../fonts/fonts.c  .generated_files/flags/d
 	@${RM} ${OBJECTDIR}/_ext/2116421387/fonts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/fonts.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/fonts.c  -o ${OBJECTDIR}/_ext/2116421387/fonts.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/fonts.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/2116421387/m12_40_L1.o: ../fonts/m12_40_L1.c  .generated_files/flags/default/706bcd91e41bc462b84963d897970fe016f75a6 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/m12_40_L1.c  -o ${OBJECTDIR}/_ext/2116421387/m12_40_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/m12_40_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o: ../images/HelloWorld_100x100_L1.c  .generated_files/flags/default/ec3565a68e0a9a93dc78046d79c285f30dccf124 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1100913241" 
@@ -299,6 +323,30 @@ ${OBJECTDIR}/_ext/1472/screen.o: ../screen.c  .generated_files/flags/default/23e
 	@${RM} ${OBJECTDIR}/_ext/1472/screen.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/screen.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screen.c  -o ${OBJECTDIR}/_ext/1472/screen.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/screen.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/1472/debugging.o: ../debugging.c  .generated_files/flags/default/9638b0c1f49c539b47b3279a96f8ee712392936a .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/debugging.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/debugging.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../debugging.c  -o ${OBJECTDIR}/_ext/1472/debugging.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/debugging.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/2116421387/m12_20_L1.o: ../fonts/m12_20_L1.c  .generated_files/flags/default/6b2ec009661cf2243d4c526bbd7e4417bc928b16 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/m12_20_L1.c  -o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/1472/clock_task.o: ../clock_task.c  .generated_files/flags/default/32598fda6357b446a99c2bd3fe43a1dad4c5f1e7 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/clock_task.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/clock_task.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../clock_task.c  -o ${OBJECTDIR}/_ext/1472/clock_task.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/clock_task.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o: ../fonts/BebasNeue-Regular_12_L1.c  .generated_files/flags/default/f8d65f241bf2ebf129745b8f8e048ffca4f21954 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../fonts/BebasNeue-Regular_12_L1.c  -o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
