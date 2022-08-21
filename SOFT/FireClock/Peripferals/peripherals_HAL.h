@@ -7,16 +7,26 @@ extern "C" {
 
     typedef enum {
         PIN_OFF = 0,
-        PIN_ON = 1,       
-    }PinValue_t;
-    
+        PIN_ON = 1,
+    } PinValue_t;
+
+    typedef enum {
+        BUTTON1 = 0,
+        BUTTON2,
+        BUTTON3,
+        BUTTON4,
+    } ButtonsName_t;
+
+
     void HAL_PIO__InitIO_Ports(void);
+    bool HAL_PIO__GetButtonState(ButtonsName_t button);
+    bool HAL_PIO__GetPowerState();
     void HAL_PIO__SetInformLed(PinValue_t value);
     void HAL_PIO__SetBuzzerOut(PinValue_t value);
     void HAL_PIO__BuckUp1Out(PinValue_t value);
     void HAL_PIO__BuckUp2Out(PinValue_t value);
     void HAL_PIO__DisplayLatch(PinValue_t value);
-    
+
     void HAL_ADC__InitADC(void);
     void HAL_MAP__GeneralPeripheralsMapping(void);
 

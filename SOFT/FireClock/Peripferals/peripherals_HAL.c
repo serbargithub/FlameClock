@@ -1,4 +1,6 @@
 #include <p24Fxxxx.h>
+#include <stdint.h>
+#include <stdbool.h>
 #include "peripherals_HAL.h"
 #include "io_ports_names.h"
 #include "peripherals_map.h"
@@ -37,6 +39,25 @@ void HAL_PIO__BuckUp2Out(PinValue_t value) {
 
 void HAL_PIO__DisplayLatch(PinValue_t value) {
     DISPLAY_LATCH = value;
+}
+
+bool HAL_PIO__GetButtonState(ButtonsName_t button) {
+    
+    switch (button) {
+        case BUTTON1:
+            return BUTTON1_IN;
+        case BUTTON2:
+            return BUTTON2_IN;
+        case BUTTON3:
+            return BUTTON3_IN;
+        case BUTTON4:
+            return BUTTON4_IN;
+        default:
+            return false;
+    }
+}
+bool HAL_PIO__GetPowerState() {
+    return POWER_SENSOR_IN;
 }
 
 void HAL_ADC__InitADC(void) {

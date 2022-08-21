@@ -13,12 +13,13 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="fonts" displayName="fonts" projectFiles="true">
-        <itemPath>../fonts/BebasNeue-Regular_30_L1.c</itemPath>
         <itemPath>../fonts/fonts.h</itemPath>
         <itemPath>../fonts/fonts.c</itemPath>
-        <itemPath>../fonts/m12_40_L1.c</itemPath>
         <itemPath>../fonts/m12_20_L1.c</itemPath>
         <itemPath>../fonts/BebasNeue-Regular_12_L1.c</itemPath>
+        <itemPath>../fonts/Antonio-Regular_16_L1.c</itemPath>
+        <itemPath>../fonts/BebasNeue-Bold_16_L1.c</itemPath>
+        <itemPath>../fonts/m12_16_L1.c</itemPath>
       </logicalFolder>
       <logicalFolder name="images" displayName="images" projectFiles="true">
         <itemPath>../images/HelloWorld_100x100_L1.c</itemPath>
@@ -40,6 +41,8 @@
         <itemPath>../Peripferals/spi_HAL.h</itemPath>
         <itemPath>../Peripferals/spi_HAL.c</itemPath>
         <itemPath>../Peripferals/uart_24F_definitions.h</itemPath>
+        <itemPath>../Peripferals/rtcc.h</itemPath>
+        <itemPath>../Peripferals/rtcc.c</itemPath>
       </logicalFolder>
       <itemPath>../definitions.h</itemPath>
       <itemPath>../interrupts.c</itemPath>
@@ -368,6 +371,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
