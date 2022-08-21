@@ -192,12 +192,12 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x22be          0x341d  (13341)
-.text                       0x24be               0x92a           0xdbf  (3519)
-.dinit                      0x2de8                0xc2           0x123  (291)
-.text                       0x2eaa               0x200           0x300  (768)
+.text                       0x24be               0x9b4           0xe8e  (3726)
+.dinit                      0x2e72                0xc2           0x123  (291)
+.text                       0x2f34               0x200           0x300  (768)
 .const                      0x8000              0x7b82          0xb943  (47427)
 
-                 Total "program" memory used (bytes):         0xff42  (65346) 49%
+                 Total "program" memory used (bytes):        0x10011  (65553) 49%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -297,15 +297,15 @@ External Symbols in Program Memory (by address):
                   0x001b1a                  _strcpy
                   0x001b2a                  ___init_stdio
                   0x001b30                  ___stpcpy
-                  0x001b70                  ___ltdf2
-                  0x001b70                  ___ledf2
                   0x001b70                  ___eqdf2
+                  0x001b70                  ___ledf2
+                  0x001b70                  ___ltdf2
                   0x001b7a                  ___extendsfdf2
                   0x001bb8                  ___fixdfsi
                   0x001c10                  __funpack
                   0x001c3a                  ___mulsi3
-                  0x001c3a                  ___mulp32peds3
                   0x001c3a                  ___mulp32eds3
+                  0x001c3a                  ___mulp32peds3
                   0x001c46                  ___subdf3
                   0x001c52                  ___adddf3
                   0x001ce8                  ___divdf3
@@ -331,42 +331,44 @@ External Symbols in Program Memory (by address):
                   0x0023bc                  _floorl
                   0x0024b4                  ___gedf2
                   0x0024b4                  ___gtdf2
-                  0x0024be                  _ShiftPreparedLineRight
-                  0x0025e0                  _AddPreparedLineToScreen
-                  0x002668                  _Screen_PutSymbol
-                  0x002758                  _Screen_PutNextSymbol
-                  0x002792                  _Screen_Printf
-                  0x00283e                  _HAL_UART__SetExternGetch
-                  0x00284a                  _HAL_UART__SerialSetup
-                  0x002976                  _HAL_UART__CheckAndResetErrors
-                  0x002ac4                  _putch
-                  0x002adc                  _getch
-                  0x002ae6                  _debug_task
-                  0x002bd6                  _SendLine
-                  0x002c20                  _Font_GetFontParam
-                  0x002c4a                  _Font_SetCurrentFont
-                  0x002c7e                  _Font_GetNewSymbolData
-                  0x002d10                  _Font_GetCurrentSymbolData
-                  0x002d18                  _HAL_PIO__InitIO_Ports
-                  0x002d40                  _HAL_PIO__SetInformLed
-                  0x002d5c                  _HAL_PIO__SetBuzzerOut
-                  0x002d78                  _HAL_PIO__BuckUp1Out
-                  0x002d94                  _HAL_PIO__BuckUp2Out
-                  0x002db0                  _HAL_PIO__DisplayLatch
-                  0x002dcc                  _HAL_ADC__InitADC
-                  0x002de0                  _HAL_MAP__GeneralPeripheralsMapping
-                  0x002eaa                  _Interrupt__Setup
-                  0x002f1e                  _Interrupt__IsFrameEnd
-                  0x002f32                  _Interrupt__ShowFrame
-                  0x002f4c                  _Interrupt__GetUART1RX
-                  0x002f5c                  _clock_task
-                  0x002fb6                  _main
-                  0x003000                  _DelayMks
-                  0x00301e                  _DelayMs
-                  0x00303e                  _PeripheralsMap__GeneralMapping
-                  0x003078                  _HAL_SPI__Init
-                  0x003086                  _HAL_SPI__SendByte
-                  0x0030a0                  _HAL_SPI__GetByte
+                  0x0024be                  _ShiftRightByBytes
+                  0x002536                  _ShifRightByBites
+                  0x002658                  _ShiftRightPreparedLine
+                  0x00266a                  _AddPreparedLineToScreen
+                  0x0026f2                  _Screen_PutSymbol
+                  0x0027e2                  _Screen_PutNextSymbol
+                  0x00281c                  _Screen_Printf
+                  0x0028c8                  _HAL_UART__SetExternGetch
+                  0x0028d4                  _HAL_UART__SerialSetup
+                  0x002a00                  _HAL_UART__CheckAndResetErrors
+                  0x002b4e                  _putch
+                  0x002b66                  _getch
+                  0x002b70                  _debug_task
+                  0x002c60                  _SendLine
+                  0x002caa                  _Font_GetFontParam
+                  0x002cd4                  _Font_SetCurrentFont
+                  0x002d08                  _Font_GetNewSymbolData
+                  0x002d9a                  _Font_GetCurrentSymbolData
+                  0x002da2                  _HAL_PIO__InitIO_Ports
+                  0x002dca                  _HAL_PIO__SetInformLed
+                  0x002de6                  _HAL_PIO__SetBuzzerOut
+                  0x002e02                  _HAL_PIO__BuckUp1Out
+                  0x002e1e                  _HAL_PIO__BuckUp2Out
+                  0x002e3a                  _HAL_PIO__DisplayLatch
+                  0x002e56                  _HAL_ADC__InitADC
+                  0x002e6a                  _HAL_MAP__GeneralPeripheralsMapping
+                  0x002f34                  _Interrupt__Setup
+                  0x002fa8                  _Interrupt__IsFrameEnd
+                  0x002fbc                  _Interrupt__ShowFrame
+                  0x002fd6                  _Interrupt__GetUART1RX
+                  0x002fe6                  _clock_task
+                  0x003040                  _main
+                  0x00308a                  _DelayMks
+                  0x0030a8                  _DelayMs
+                  0x0030c8                  _PeripheralsMap__GeneralMapping
+                  0x003102                  _HAL_SPI__Init
+                  0x003110                  _HAL_SPI__SendByte
+                  0x00312a                  _HAL_SPI__GetByte
                   0x008000                  _BebasNeueRegular_30_L1
                   0x009d86                  _m12_40_L1
                   0x00b71a                  _FlameAnimation
@@ -383,45 +385,47 @@ External Symbols in Program Memory (by address):
 
 External Symbols in Program Memory (by name):
 
-                  0x0025e0                  _AddPreparedLineToScreen
+                  0x00266a                  _AddPreparedLineToScreen
                   0x00ebe2                  _ArtsStrade
                   0x00f60a                  _BebasNeueRegular_12_L1
                   0x008000                  _BebasNeueRegular_30_L1
                   0x00d07e                  _BlankScreen1
                   0x00d592                  _BlankScreen2
-                  0x003000                  _DelayMks
-                  0x00301e                  _DelayMs
+                  0x00308a                  _DelayMks
+                  0x0030a8                  _DelayMs
                   0x00b71a                  _FlameAnimation
-                  0x002d10                  _Font_GetCurrentSymbolData
-                  0x002c20                  _Font_GetFontParam
-                  0x002c7e                  _Font_GetNewSymbolData
-                  0x002c4a                  _Font_SetCurrentFont
-                  0x002dcc                  _HAL_ADC__InitADC
-                  0x002de0                  _HAL_MAP__GeneralPeripheralsMapping
-                  0x002d78                  _HAL_PIO__BuckUp1Out
-                  0x002d94                  _HAL_PIO__BuckUp2Out
-                  0x002db0                  _HAL_PIO__DisplayLatch
-                  0x002d18                  _HAL_PIO__InitIO_Ports
-                  0x002d5c                  _HAL_PIO__SetBuzzerOut
-                  0x002d40                  _HAL_PIO__SetInformLed
-                  0x0030a0                  _HAL_SPI__GetByte
-                  0x003078                  _HAL_SPI__Init
-                  0x003086                  _HAL_SPI__SendByte
-                  0x002976                  _HAL_UART__CheckAndResetErrors
-                  0x00284a                  _HAL_UART__SerialSetup
-                  0x00283e                  _HAL_UART__SetExternGetch
+                  0x002d9a                  _Font_GetCurrentSymbolData
+                  0x002caa                  _Font_GetFontParam
+                  0x002d08                  _Font_GetNewSymbolData
+                  0x002cd4                  _Font_SetCurrentFont
+                  0x002e56                  _HAL_ADC__InitADC
+                  0x002e6a                  _HAL_MAP__GeneralPeripheralsMapping
+                  0x002e02                  _HAL_PIO__BuckUp1Out
+                  0x002e1e                  _HAL_PIO__BuckUp2Out
+                  0x002e3a                  _HAL_PIO__DisplayLatch
+                  0x002da2                  _HAL_PIO__InitIO_Ports
+                  0x002de6                  _HAL_PIO__SetBuzzerOut
+                  0x002dca                  _HAL_PIO__SetInformLed
+                  0x00312a                  _HAL_SPI__GetByte
+                  0x003102                  _HAL_SPI__Init
+                  0x003110                  _HAL_SPI__SendByte
+                  0x002a00                  _HAL_UART__CheckAndResetErrors
+                  0x0028d4                  _HAL_UART__SerialSetup
+                  0x0028c8                  _HAL_UART__SetExternGetch
                   0x00e1ba                  _HelloWorld
-                  0x002f4c                  _Interrupt__GetUART1RX
-                  0x002f1e                  _Interrupt__IsFrameEnd
-                  0x002eaa                  _Interrupt__Setup
-                  0x002f32                  _Interrupt__ShowFrame
+                  0x002fd6                  _Interrupt__GetUART1RX
+                  0x002fa8                  _Interrupt__IsFrameEnd
+                  0x002f34                  _Interrupt__Setup
+                  0x002fbc                  _Interrupt__ShowFrame
                   0x00e6ce                  _Pepsi
-                  0x00303e                  _PeripheralsMap__GeneralMapping
-                  0x002792                  _Screen_Printf
-                  0x002758                  _Screen_PutNextSymbol
-                  0x002668                  _Screen_PutSymbol
-                  0x002bd6                  _SendLine
-                  0x0024be                  _ShiftPreparedLineRight
+                  0x0030c8                  _PeripheralsMap__GeneralMapping
+                  0x00281c                  _Screen_Printf
+                  0x0027e2                  _Screen_PutNextSymbol
+                  0x0026f2                  _Screen_PutSymbol
+                  0x002c60                  _SendLine
+                  0x002536                  _ShifRightByBites
+                  0x0024be                  _ShiftRightByBytes
+                  0x002658                  _ShiftRightPreparedLine
                   0x00f0f6                  _Triden
                   0x0003d6                  __DefaultInterrupt
                   0x0002d8                  __T1Interrupt
@@ -490,18 +494,18 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x00194e                  _atoi
-                  0x002f5c                  _clock_task
-                  0x002ae6                  _debug_task
+                  0x002fe6                  _clock_task
+                  0x002b70                  _debug_task
                   0x0023bc                  _floorl
-                  0x002adc                  _getch
+                  0x002b66                  _getch
                   0x00fb47                  _line1
                   0x00fb54                  _line2
                   0x00daa6                  _m12_20_L1
                   0x009d86                  _m12_40_L1
-                  0x002fb6                  _main
+                  0x003040                  _main
                   0x00049c                  _memcpy
                   0x0004aa                  _memset
-                  0x002ac4                  _putch
+                  0x002b4e                  _putch
                   0x001b1a                  _strcpy
                   0x000a42                  _strlen
                   0x00199a                  _tolower
@@ -830,7 +834,7 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x6726
+.debug_info       0x000000       0x67a2
  *(.debug_info)
  .debug_info      0x000000        0x195 build/default/production/_ext/2116421387/BebasNeue-Regular_30_L1.o
  .debug_info      0x000195        0x4de build/default/production/_ext/2116421387/fonts.o
@@ -848,26 +852,26 @@ __CONFIG1
  .debug_info      0x0037d9       0x1286 build/default/production/_ext/1472/interrupts.o
  .debug_info      0x004a5f        0x2eb build/default/production/_ext/1472/main_fclock.o
  .debug_info      0x004d4a        0x19c build/default/production/_ext/1472/delays.o
- .debug_info      0x004ee6        0x5ca build/default/production/_ext/1472/screen.o
- .debug_info      0x0054b0        0x441 build/default/production/_ext/1472/debugging.o
- .debug_info      0x0058f1        0x17a build/default/production/_ext/2116421387/m12_20_L1.o
- .debug_info      0x005a6b        0x26c build/default/production/_ext/1472/clock_task.o
- .debug_info      0x005cd7        0x195 build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
- .debug_info      0x005e6c         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
- .debug_info      0x005ef9         0x90 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
- .debug_info      0x005f89         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
- .debug_info      0x006016         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
- .debug_info      0x0060a3         0x8c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
- .debug_info      0x00612f         0xa9 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
- .debug_info      0x0061d8         0xa9 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
- .debug_info      0x006281         0xa9 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
- .debug_info      0x00632a         0xaa c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
- .debug_info      0x0063d4         0x8e c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
- .debug_info      0x006462         0x8b c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
- .debug_info      0x0064ed         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack.XX_o)
- .debug_info      0x00657a         0x8e c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o)
- .debug_info      0x006608         0x93 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
- .debug_info      0x00669b         0x8b c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
+ .debug_info      0x004ee6        0x646 build/default/production/_ext/1472/screen.o
+ .debug_info      0x00552c        0x441 build/default/production/_ext/1472/debugging.o
+ .debug_info      0x00596d        0x17a build/default/production/_ext/2116421387/m12_20_L1.o
+ .debug_info      0x005ae7        0x26c build/default/production/_ext/1472/clock_task.o
+ .debug_info      0x005d53        0x195 build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
+ .debug_info      0x005ee8         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
+ .debug_info      0x005f75         0x90 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
+ .debug_info      0x006005         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
+ .debug_info      0x006092         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
+ .debug_info      0x00611f         0x8c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
+ .debug_info      0x0061ab         0xa9 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
+ .debug_info      0x006254         0xa9 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
+ .debug_info      0x0062fd         0xa9 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
+ .debug_info      0x0063a6         0xaa c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
+ .debug_info      0x006450         0x8e c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
+ .debug_info      0x0064de         0x8b c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
+ .debug_info      0x006569         0x8d c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack.XX_o)
+ .debug_info      0x0065f6         0x8e c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o)
+ .debug_info      0x006684         0x93 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
+ .debug_info      0x006717         0x8b c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xeff
@@ -909,7 +913,7 @@ __CONFIG1
  .debug_abbrev    0x000ed7         0x14 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
  .debug_abbrev    0x000eeb         0x14 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
 
-.debug_line       0x000000       0x16c5
+.debug_line       0x000000       0x16e0
  *(.debug_line)
  .debug_line      0x000000         0x8f build/default/production/_ext/2116421387/BebasNeue-Regular_30_L1.o
  .debug_line      0x00008f         0xc3 build/default/production/_ext/2116421387/fonts.o
@@ -927,28 +931,28 @@ __CONFIG1
  .debug_line      0x0008b8        0x195 build/default/production/_ext/1472/interrupts.o
  .debug_line      0x000a4d        0x102 build/default/production/_ext/1472/main_fclock.o
  .debug_line      0x000b4f         0x90 build/default/production/_ext/1472/delays.o
- .debug_line      0x000bdf        0x118 build/default/production/_ext/1472/screen.o
- .debug_line      0x000cf7        0x125 build/default/production/_ext/1472/debugging.o
- .debug_line      0x000e1c         0x81 build/default/production/_ext/2116421387/m12_20_L1.o
- .debug_line      0x000e9d         0xe5 build/default/production/_ext/1472/clock_task.o
- .debug_line      0x000f82         0x8f build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
- .debug_line      0x001011         0x3a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
- .debug_line      0x00104b         0x59 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
- .debug_line      0x0010a4         0x61 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
- .debug_line      0x001105         0x4a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
- .debug_line      0x00114f         0x3a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
- .debug_line      0x001189         0xa2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
- .debug_line      0x00122b        0x100 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
- .debug_line      0x00132b         0xde c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
- .debug_line      0x001409         0xe8 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
- .debug_line      0x0014f1         0x5f c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
- .debug_line      0x001550         0x45 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
- .debug_line      0x001595         0x5c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack.XX_o)
- .debug_line      0x0015f1         0x53 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o)
- .debug_line      0x001644         0x49 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
- .debug_line      0x00168d         0x38 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
+ .debug_line      0x000bdf        0x133 build/default/production/_ext/1472/screen.o
+ .debug_line      0x000d12        0x125 build/default/production/_ext/1472/debugging.o
+ .debug_line      0x000e37         0x81 build/default/production/_ext/2116421387/m12_20_L1.o
+ .debug_line      0x000eb8         0xe5 build/default/production/_ext/1472/clock_task.o
+ .debug_line      0x000f9d         0x8f build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
+ .debug_line      0x00102c         0x3a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(deqltle.XX_o)
+ .debug_line      0x001066         0x59 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.XX_o)
+ .debug_line      0x0010bf         0x61 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(fixdfsi.XX_o)
+ .debug_line      0x001120         0x4a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
+ .debug_line      0x00116a         0x3a c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.XX_o)
+ .debug_line      0x0011a4         0xa2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpadd.XX_o)
+ .debug_line      0x001246        0x100 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpdiv.XX_o)
+ .debug_line      0x001346         0xde c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpmul.XX_o)
+ .debug_line      0x001424         0xe8 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpsubs.XX_o)
+ .debug_line      0x00150c         0x5f c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dcompare.XX_o)
+ .debug_line      0x00156b         0x45 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dtype.XX_o)
+ .debug_line      0x0015b0         0x5c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack.XX_o)
+ .debug_line      0x00160c         0x53 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dunpack2.XX_o)
+ .debug_line      0x00165f         0x49 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dpropagateNaN.XX_o)
+ .debug_line      0x0016a8         0x38 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(dgtge.XX_o)
 
-.debug_frame      0x000000        0x558
+.debug_frame      0x000000        0x58c
  *(.debug_frame)
  .debug_frame     0x000000         0x7c build/default/production/_ext/2116421387/fonts.o
  .debug_frame     0x00007c         0x2e build/default/production/_ext/1037427530/peripherals_map.o
@@ -958,11 +962,11 @@ __CONFIG1
  .debug_frame     0x000286        0x110 build/default/production/_ext/1472/interrupts.o
  .debug_frame     0x000396         0x3c build/default/production/_ext/1472/main_fclock.o
  .debug_frame     0x0003d2         0x48 build/default/production/_ext/1472/delays.o
- .debug_frame     0x00041a         0x96 build/default/production/_ext/1472/screen.o
- .debug_frame     0x0004b0         0x5e build/default/production/_ext/1472/debugging.o
- .debug_frame     0x00050e         0x4a build/default/production/_ext/1472/clock_task.o
+ .debug_frame     0x00041a         0xca build/default/production/_ext/1472/screen.o
+ .debug_frame     0x0004e4         0x5e build/default/production/_ext/1472/debugging.o
+ .debug_frame     0x000542         0x4a build/default/production/_ext/1472/clock_task.o
 
-.debug_str        0x000000        0x22f
+.debug_str        0x000000        0x23a
  *(.debug_str)
  .debug_str       0x000000         0x42 build/default/production/_ext/2116421387/fonts.o
  .debug_str       0x000042         0x37 build/default/production/_ext/1037427530/peripherals_map.o
@@ -971,8 +975,8 @@ __CONFIG1
  .debug_str       0x000154         0x1f build/default/production/_ext/1037427530/spi_HAL.o
  .debug_str       0x000173         0x4a build/default/production/_ext/1472/interrupts.o
  .debug_str       0x0001bd          0xb build/default/production/_ext/1472/main_fclock.o
- .debug_str       0x0001c8         0x33 build/default/production/_ext/1472/screen.o
- .debug_str       0x0001fb         0x34 build/default/production/_ext/1472/debugging.o
+ .debug_str       0x0001c8         0x3e build/default/production/_ext/1472/screen.o
+ .debug_str       0x000206         0x34 build/default/production/_ext/1472/debugging.o
 
 .debug_loc
  *(.debug_loc)
@@ -981,7 +985,7 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x5da
+                  0x000000        0x605
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x2d build/default/production/_ext/2116421387/BebasNeue-Regular_30_L1.o
@@ -1016,15 +1020,15 @@ __CONFIG1
  .debug_pubnames
                   0x00045a         0x2b build/default/production/_ext/1472/delays.o
  .debug_pubnames
-                  0x000485         0xa5 build/default/production/_ext/1472/screen.o
+                  0x000485         0xd0 build/default/production/_ext/1472/screen.o
  .debug_pubnames
-                  0x00052a         0x42 build/default/production/_ext/1472/debugging.o
+                  0x000555         0x42 build/default/production/_ext/1472/debugging.o
  .debug_pubnames
-                  0x00056c         0x20 build/default/production/_ext/2116421387/m12_20_L1.o
+                  0x000597         0x20 build/default/production/_ext/2116421387/m12_20_L1.o
  .debug_pubnames
-                  0x00058c         0x21 build/default/production/_ext/1472/clock_task.o
+                  0x0005b7         0x21 build/default/production/_ext/1472/clock_task.o
  .debug_pubnames
-                  0x0005ad         0x2d build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
+                  0x0005d8         0x2d build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -2390,56 +2394,58 @@ __xc_reference_data
  .const           0x00fb62         0x16 build/default/production/_ext/1472/clock_task.o
  .const           0x00fb78          0xa build/default/production/_ext/1472/main_fclock.o
 
-.text             0x0024be        0x92a
- .text            0x0024be        0x380 build/default/production/_ext/1472/screen.o
-                  0x0024be                  _ShiftPreparedLineRight
-                  0x0025e0                  _AddPreparedLineToScreen
-                  0x002668                  _Screen_PutSymbol
-                  0x002758                  _Screen_PutNextSymbol
-                  0x002792                  _Screen_Printf
- .text            0x00283e        0x2a8 build/default/production/_ext/1037427530/uart_HAL.o
-                  0x00283e                  _HAL_UART__SetExternGetch
-                  0x00284a                  _HAL_UART__SerialSetup
-                  0x002976                  _HAL_UART__CheckAndResetErrors
-                  0x002ac4                  _putch
-                  0x002adc                  _getch
- .text            0x002ae6        0x13a build/default/production/_ext/1472/debugging.o
-                  0x002ae6                  _debug_task
-                  0x002bd6                  _SendLine
- .text            0x002c20         0xf8 build/default/production/_ext/2116421387/fonts.o
-                  0x002c20                  _Font_GetFontParam
-                  0x002c4a                  _Font_SetCurrentFont
-                  0x002c7e                  _Font_GetNewSymbolData
-                  0x002d10                  _Font_GetCurrentSymbolData
- .text            0x002d18         0xd0 build/default/production/_ext/1037427530/peripherals_HAL.o
-                  0x002d18                  _HAL_PIO__InitIO_Ports
-                  0x002d40                  _HAL_PIO__SetInformLed
-                  0x002d5c                  _HAL_PIO__SetBuzzerOut
-                  0x002d78                  _HAL_PIO__BuckUp1Out
-                  0x002d94                  _HAL_PIO__BuckUp2Out
-                  0x002db0                  _HAL_PIO__DisplayLatch
-                  0x002dcc                  _HAL_ADC__InitADC
-                  0x002de0                  _HAL_MAP__GeneralPeripheralsMapping
+.text             0x0024be        0x9b4
+ .text            0x0024be        0x40a build/default/production/_ext/1472/screen.o
+                  0x0024be                  _ShiftRightByBytes
+                  0x002536                  _ShifRightByBites
+                  0x002658                  _ShiftRightPreparedLine
+                  0x00266a                  _AddPreparedLineToScreen
+                  0x0026f2                  _Screen_PutSymbol
+                  0x0027e2                  _Screen_PutNextSymbol
+                  0x00281c                  _Screen_Printf
+ .text            0x0028c8        0x2a8 build/default/production/_ext/1037427530/uart_HAL.o
+                  0x0028c8                  _HAL_UART__SetExternGetch
+                  0x0028d4                  _HAL_UART__SerialSetup
+                  0x002a00                  _HAL_UART__CheckAndResetErrors
+                  0x002b4e                  _putch
+                  0x002b66                  _getch
+ .text            0x002b70        0x13a build/default/production/_ext/1472/debugging.o
+                  0x002b70                  _debug_task
+                  0x002c60                  _SendLine
+ .text            0x002caa         0xf8 build/default/production/_ext/2116421387/fonts.o
+                  0x002caa                  _Font_GetFontParam
+                  0x002cd4                  _Font_SetCurrentFont
+                  0x002d08                  _Font_GetNewSymbolData
+                  0x002d9a                  _Font_GetCurrentSymbolData
+ .text            0x002da2         0xd0 build/default/production/_ext/1037427530/peripherals_HAL.o
+                  0x002da2                  _HAL_PIO__InitIO_Ports
+                  0x002dca                  _HAL_PIO__SetInformLed
+                  0x002de6                  _HAL_PIO__SetBuzzerOut
+                  0x002e02                  _HAL_PIO__BuckUp1Out
+                  0x002e1e                  _HAL_PIO__BuckUp2Out
+                  0x002e3a                  _HAL_PIO__DisplayLatch
+                  0x002e56                  _HAL_ADC__InitADC
+                  0x002e6a                  _HAL_MAP__GeneralPeripheralsMapping
 
-.dinit            0x002de8         0xc2
- .dinit           0x002de8         0xc2 data_init
+.dinit            0x002e72         0xc2
+ .dinit           0x002e72         0xc2 data_init
 
-.text             0x002eaa        0x200
- .text            0x002eaa         0xb2 build/default/production/_ext/1472/interrupts.o
-                  0x002eaa                  _Interrupt__Setup
-                  0x002f1e                  _Interrupt__IsFrameEnd
-                  0x002f32                  _Interrupt__ShowFrame
-                  0x002f4c                  _Interrupt__GetUART1RX
- .text            0x002f5c         0x5a build/default/production/_ext/1472/clock_task.o
-                  0x002f5c                  _clock_task
- .text            0x002fb6         0x4a build/default/production/_ext/1472/main_fclock.o
-                  0x002fb6                  _main
- .text            0x003000         0x3e build/default/production/_ext/1472/delays.o
-                  0x003000                  _DelayMks
-                  0x00301e                  _DelayMs
- .text            0x00303e         0x3a build/default/production/_ext/1037427530/peripherals_map.o
-                  0x00303e                  _PeripheralsMap__GeneralMapping
- .text            0x003078         0x32 build/default/production/_ext/1037427530/spi_HAL.o
-                  0x003078                  _HAL_SPI__Init
-                  0x003086                  _HAL_SPI__SendByte
-                  0x0030a0                  _HAL_SPI__GetByte
+.text             0x002f34        0x200
+ .text            0x002f34         0xb2 build/default/production/_ext/1472/interrupts.o
+                  0x002f34                  _Interrupt__Setup
+                  0x002fa8                  _Interrupt__IsFrameEnd
+                  0x002fbc                  _Interrupt__ShowFrame
+                  0x002fd6                  _Interrupt__GetUART1RX
+ .text            0x002fe6         0x5a build/default/production/_ext/1472/clock_task.o
+                  0x002fe6                  _clock_task
+ .text            0x003040         0x4a build/default/production/_ext/1472/main_fclock.o
+                  0x003040                  _main
+ .text            0x00308a         0x3e build/default/production/_ext/1472/delays.o
+                  0x00308a                  _DelayMks
+                  0x0030a8                  _DelayMs
+ .text            0x0030c8         0x3a build/default/production/_ext/1037427530/peripherals_map.o
+                  0x0030c8                  _PeripheralsMap__GeneralMapping
+ .text            0x003102         0x32 build/default/production/_ext/1037427530/spi_HAL.o
+                  0x003102                  _HAL_SPI__Init
+                  0x003110                  _HAL_SPI__SendByte
+                  0x00312a                  _HAL_SPI__GetByte
