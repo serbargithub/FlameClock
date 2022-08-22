@@ -24,7 +24,7 @@
 // CONFIG2
 #pragma config POSCMOD = HS 
 #pragma config OSCIOFNC = OFF 
-#pragma config FCKSM = CSDCMD
+#pragma config FCKSM = CSECMD
 #pragma config FNOSC = PRI
 #pragma config IESO = ON 
 // CONFIG1
@@ -37,34 +37,75 @@
 #pragma config GCP = OFF 
 #pragma config JTAGEN = OFF 
 
-static DisplayFrame_t g_PreparedFrame; 
+static DisplayFrame_t g_PreparedFrame;
 
-void SendLine(unsigned char countV);
+void PowerSavingMode();
+
 //****************************************************************************
 
 int main(void) {
-    HAL_PIO__InitIO_Ports();
+    HAL_ConrolReg__HighPerfomance();
+    HAL_PIO__Init_IOPorts();
     HAL_ADC__InitADC();
     HAL_MAP__GeneralPeripheralsMapping();
     HAL_UART__SetExternGetch(Interrupt__GetUART1RX);
     HAL_UART__SerialSetup(UART_SPEED_115200, UART_CH1);
     HAL_SPI__Init();
     Interrupt__Setup();
+    Clock_Init();
     DelayMs(200);
     HAL_PIO__BuckUp1Out(PIN_ON);
     DelayMs(200);
     HAL_PIO__BuckUp2Out(PIN_ON);
 
-    memcpy(g_PreparedFrame.data, HelloWorld, sizeof(HelloWorld));
+    memcpy(g_PreparedFrame.data, ArtsStrade, sizeof (ArtsStrade));
     Interrupt__ShowFrame(&g_PreparedFrame);
     printf("\r\nStart.");
     HAL_UART__CheckAndResetErrors(UART_CH1);
-    DelayMs(200);
+    DelayMs(1000);
 
-    clock_task();
+    while (1) {
+        DelayMs(200);
+        if (HAL_ADC__GetPowerState() == 0) {
+            PowerSavingMode();
+            return; //full reset
+        } else {
+            Clock_Task();
+        }
+    }
 }
 
+void PowerSavingMode() {
+    
+    printf("\r\nEnter Power save mode.");
+    Interrupt__DisableAll();
+    HAL_UART__TurnOff(UART_CH1);
+    HAL_SPI__TurnOff();
+    HAL_PIO__TurnOff_IOPorts();
+    HAL_ConrolReg__LowPerfomance();
 
+    while (HAL_ADC__GetPowerState() == 0) {
+        DelayMs(2);
+    }
+    DelayMs(2);
+    /*
+    HAL_ConrolReg__HighPerfomance();
+    HAL_PIO__Init_IOPorts();
+    HAL_ADC__InitADC();
+    HAL_MAP__GeneralPeripheralsMapping();
+    HAL_UART__SetExternGetch(Interrupt__GetUART1RX);
+    HAL_UART__SerialSetup(UART_SPEED_115200, UART_CH1);
+    HAL_SPI__Init();
+    Interrupt__Setup();
+    Clock_Init();
+    DelayMs(200);
+    HAL_PIO__BuckUp1Out(PIN_ON);
+    DelayMs(200);
+    HAL_PIO__BuckUp2Out(PIN_ON);
+    HAL_UART__CheckAndResetErrors(UART_CH1);
+    printf("\r\nFull power mode.");
+   */
+}
 
 
 //******************************************************************************

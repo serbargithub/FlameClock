@@ -5,15 +5,36 @@
 
 GETCHAR_CALLBACK g_GetchCallBack;
 
+const unsigned int CONST_MODE = UART_IDLE_STOP & UART_IrDA_DISABLE & UART_MODE_FLOW & UART_UEN_00 & UART_DIS_WAKE & UART_DIS_LOOPBACK & UART_DIS_ABAUD & UART_UXRX_IDLE_ONE & UART_NO_PAR_8BIT&UART_1STOPBIT;
+const unsigned int CONS_STA = UART_INT_TX_BUF_EMPTY & UART_IrDA_POL_INV_ZERO & UART_SYNC_BREAK_DISABLED & UART_TX_ENABLE & UART_INT_RX_CHAR & UART_ADR_DETECT_DIS&UART_RX_OVERRUN_CLEAR;
+
 void HAL_UART__SetExternGetch(GETCHAR_CALLBACK getChar) {
     g_GetchCallBack = getChar;
+}
+
+void HAL_UART__TurnOff(UART_Channel_t uartChannel) {
+    switch (uartChannel) {
+        case UART_CH1:
+            U1MODEbits.UARTEN = 0;
+            break;
+        case UART_CH2:
+            U2MODEbits.UARTEN = 0;
+            break;
+        case UART_CH3:
+            U3MODEbits.UARTEN = 0;
+            break;
+        case UART_CH4:
+            U4MODEbits.UARTEN = 0;
+            break;
+        default:
+            break;
+    }
+
 }
 
 void HAL_UART__SerialSetup(UART_Speed_t serialSpeed, UART_Channel_t uartChannel) {
 
     unsigned int UART_value, BRG_value;
-    const unsigned int CONST_MODE = UART_IDLE_STOP & UART_IrDA_DISABLE & UART_MODE_FLOW & UART_UEN_00 & UART_DIS_WAKE & UART_DIS_LOOPBACK & UART_DIS_ABAUD & UART_UXRX_IDLE_ONE & UART_NO_PAR_8BIT&UART_1STOPBIT;
-    const unsigned int CONS_STA = UART_INT_TX_BUF_EMPTY & UART_IrDA_POL_INV_ZERO & UART_SYNC_BREAK_DISABLED & UART_TX_ENABLE & UART_INT_RX_CHAR & UART_ADR_DETECT_DIS&UART_RX_OVERRUN_CLEAR;
 
     switch (serialSpeed) {
         case UART_SPEED_2400:
@@ -186,15 +207,15 @@ bool HAL_UART__CheckAndResetErrors(UART_Channel_t uartChannel) {
 void putch(char c) {
 
     while (U1STAbits.UTXBF) {
-//        ClrWdt();
+        //        ClrWdt();
     }
     U1TXREG = c;
 }
 
 char getch(void) {
-    
-//    if (g_GetchCallBack == NULL){
-//      return 0; 
-//    }
+
+    //    if (g_GetchCallBack == NULL){
+    //      return 0; 
+    //    }
     return g_GetchCallBack();
 }

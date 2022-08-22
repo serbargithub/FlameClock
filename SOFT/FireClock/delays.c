@@ -13,7 +13,7 @@ void DelayMks(uint16_t timeMks) {
 
 void DelayMs(uint16_t timeMs) {
     while (timeMs--) {
-        DelayMks(1000);
+        DelayMks(4000);
     }
 }
 //----------------------

@@ -8,6 +8,7 @@ extern "C" {
 #include "definitions.h" 
    
 void Interrupt__Setup(void);
+bool Interrupt__DisableAll();
 void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
 bool Interrupt__IsFrameEnd();
 char Interrupt__GetUART1RX();

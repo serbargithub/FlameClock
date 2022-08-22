@@ -17,10 +17,12 @@ extern "C" {
         BUTTON4,
     } ButtonsName_t;
 
-
-    void HAL_PIO__InitIO_Ports(void);
+    void HAL_ConrolReg__HighPerfomance(void);
+    void HAL_ConrolReg__LowPerfomance(void);
+    void HAL_PIO__Init_IOPorts(void);
+    void HAL_PIO__TurnOff_IOPorts(void);
     bool HAL_PIO__GetButtonState(ButtonsName_t button);
-    bool HAL_PIO__GetPowerState();
+    bool HAL_ADC__GetPowerState();
     void HAL_PIO__SetInformLed(PinValue_t value);
     void HAL_PIO__SetBuzzerOut(PinValue_t value);
     void HAL_PIO__BuckUp1Out(PinValue_t value);

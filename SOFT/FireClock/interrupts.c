@@ -60,6 +60,10 @@ void _ISR_PSV _U1RXInterrupt(void) {
 }
 //--
 
+void _ISR_PSV _CNInterrupt(void) {
+    _CNIF = 0;
+}
+
 /*
 void _ISR _U2RXInterrupt(void) {
     static unsigned char tempRX;
@@ -94,7 +98,7 @@ void Interrupt__Setup(void) {
 
     TMR1 = 0; // clear the timer
     TMR2 = 0; // clear the timer
-    PR1 = 1580 - 1; //3200 - 1; // set the period register 2500 Hz 
+    PR1 = 4740 - 1;//1580 - 1; //3200 - 1; // set the period register 2500 Hz 
     PR2 = 8000 - 1; // set the period register 1 kHz
     T1CON = 0x8000; // enabled, prescaler 1:1, internal clock  
     T2CON = 0x8000; // enabled, prescaler 1:1, internal clock   system tick RTOS
@@ -105,9 +109,16 @@ void Interrupt__Setup(void) {
 
     _U1RXIF = 0;
     _U1RXIE = 1;
+    
+ //   _CN30IE = 1;    
+ //   _CNIE   = 1;    // enable input on change interrupt 
 
     // 2.3 init the processor priority level
     _IPL = 0; // this is the default value anyway
+}
+
+bool Interrupt__DisableAll() {
+    _IPL = 7;
 }
 
 bool Interrupt__IsFrameEnd() {

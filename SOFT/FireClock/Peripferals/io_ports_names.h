@@ -35,7 +35,9 @@ extern "C" {
 #define  MASK_PORTD    	0b1111010111101111  
 #define  MASK_PORTE    	0b1111111111011111  
 #define  MASK_PORTG    	0xFFFF  
-#define  MASK_PORTF    	0xFFFF  
+#define  MASK_PORTF    	0xFFFF 
+    
+#define  MASK_OFF    	0xFFFF 
 
 
 

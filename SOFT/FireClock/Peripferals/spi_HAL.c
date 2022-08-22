@@ -2,6 +2,10 @@
 
 //-----------------------------------------
 
+void HAL_SPI__TurnOff(void) {
+    SPI1STAT = 0x0000;
+}
+
 void HAL_SPI__Init(void) {
     SPI1CON1 = 0x013F; //freq divided 3D by 16  3E by 8
     SPI1STAT = 0x8000;

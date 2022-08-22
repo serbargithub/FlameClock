@@ -1,11 +1,22 @@
 #include <p24Fxxxx.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include "peripherals_HAL.h"
 #include "io_ports_names.h"
 #include "peripherals_map.h"
 
-void HAL_PIO__InitIO_Ports(void) {
+void HAL_ConrolReg__HighPerfomance(void) {
+    __builtin_write_OSCCONH(0x03); //02 - 16mHz 03 - 64 mHz
+    __builtin_write_OSCCONL(OSCCON | 0x01);
+}
+
+void HAL_ConrolReg__LowPerfomance(void) {
+    __builtin_write_OSCCONH(0x05);
+    __builtin_write_OSCCONL(OSCCON | 0x01);
+}
+
+void HAL_PIO__Init_IOPorts(void) {
     PORTB = 0;
     PORTD = 0;
     PORTE = 0;
@@ -18,6 +29,16 @@ void HAL_PIO__InitIO_Ports(void) {
     TRISE = MASK_PORTE;
     TRISG = MASK_PORTG;
     TRISF = MASK_PORTF;
+}
+
+void HAL_PIO__TurnOff_IOPorts(void) {
+
+    TRISB = MASK_OFF;
+    TRISC = MASK_OFF;
+    TRISD = MASK_OFF;
+    TRISE = MASK_OFF;
+    TRISG = MASK_OFF;
+    TRISF = MASK_OFF;
 
 }
 
@@ -42,7 +63,7 @@ void HAL_PIO__DisplayLatch(PinValue_t value) {
 }
 
 bool HAL_PIO__GetButtonState(ButtonsName_t button) {
-    
+
     switch (button) {
         case BUTTON1:
             return BUTTON1_IN;
@@ -56,16 +77,22 @@ bool HAL_PIO__GetButtonState(ButtonsName_t button) {
             return false;
     }
 }
-bool HAL_PIO__GetPowerState() {
-    return POWER_SENSOR_IN;
+
+bool HAL_ADC__GetPowerState() {
+    AD1CON1bits.SAMP = 1;
+    while (!AD1CON1bits.DONE) {
+    };
+    return (ADC1BUF0 > 800);
 }
 
 void HAL_ADC__InitADC(void) {
-    AD1PCFG = 0xFFFF;
-    AD1CSSL = 0;
-    AD1CON3 = 0x0101;
+    AD1PCFG = 0xEFFF;
+    AD1CON1 = 0x00E0; // turn on the ADC
+    AD1CHS = 0x000C;
+    AD1CSSL = 0x0000;
+    AD1CON3 = 0x1F02;
     AD1CON2 = 0x0000;
-    AD1CON1 = 0x0000; // turn off the ADC
+    AD1CON1bits.ADON = 1;
 
 }
 
