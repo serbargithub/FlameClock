@@ -195,11 +195,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x22d2          0x343b  (13371)
 .text                       0x24d2              0x1360          0x1d10  (7440)
-.dinit                      0x3832                0xe2           0x153  (339)
-.text                       0x3914               0x1fa           0x2f7  (759)
-.const                      0x8000              0x6ef4          0xa66e  (42606)
+.dinit                      0x3832                0xe4           0x156  (342)
+.text                       0x3916               0x1fa           0x2f7  (759)
+.const                      0x8000              0x6ef6          0xa671  (42609)
 
-                 Total "program" memory used (bytes):         0xfc03  (64515) 49%
+                 Total "program" memory used (bytes):         0xfc09  (64521) 49%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -208,24 +208,24 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0             0xc  (12)
 .bss                         0x80c                   0          0x1458  (5208)
-.data                       0x1c64                   0            0x84  (132)
-.bss                        0x1ce8                   0            0x2c  (44)
-.data                       0x1d14                   0            0x20  (32)
-.bss                        0x1d34                   0             0x2  (2)
-.data                       0x1d36                   0             0x2  (2)
-.heap                       0x1d38                   0           0x100  (256)
+.data                       0x1c64                   0            0x88  (136)
+.bss                        0x1cec                   0            0x2c  (44)
+.data                       0x1d18                   0            0x20  (32)
+.bss                        0x1d38                   0             0x2  (2)
+.data                       0x1d3a                   0             0x2  (2)
+.heap                       0x1d3c                   0           0x100  (256)
 
-                 Total "data" memory used (bytes):         0x1638  (5688) 34%
+                 Total "data" memory used (bytes):         0x163c  (5692) 34%
 
 
 Dynamic Memory Usage
 
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
-heap                        0x1d38                               0x100  (256)
-stack                       0x1e38                              0x29c8  (10696)
+heap                        0x1d3c                               0x100  (256)
+stack                       0x1e3c                              0x29c4  (10692)
 
-                 Maximum dynamic memory (bytes):         0x2ac8  (10952)
+                 Maximum dynamic memory (bytes):         0x2ac4  (10948)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -236,26 +236,26 @@ External Symbols in Data Memory (by address):
                     0x1c64                  __stdout
                     0x1c66                  ___stdout_used
                     0x1ca6                  _WeekDay
-                    0x1cb4                  _Month
-                    0x1ce8                  _aLineData
-                    0x1cf5                  _aLineMask
-                    0x1d34                  ___errno_val
-                    0x1d36                  ___C30_UART
-                    0x3a70                  __heap
-                    0x3b70                  __eheap
+                    0x1cb6                  _Month
+                    0x1cec                  _aLineData
+                    0x1cf9                  _aLineMask
+                    0x1d38                  ___errno_val
+                    0x1d3a                  ___C30_UART
+                    0x3a78                  __heap
+                    0x3b78                  __eheap
 
 External Symbols in Data Memory (by name):
 
-                    0x1cb4                  _Month
+                    0x1cb6                  _Month
                     0x1ca6                  _WeekDay
-                    0x1d36                  ___C30_UART
-                    0x1d34                  ___errno_val
+                    0x1d3a                  ___C30_UART
+                    0x1d38                  ___errno_val
                     0x1c66                  ___stdout_used
-                    0x3b70                  __eheap
-                    0x3a70                  __heap
+                    0x3b78                  __eheap
+                    0x3a78                  __heap
                     0x1c64                  __stdout
-                    0x1ce8                  _aLineData
-                    0x1cf5                  _aLineMask
+                    0x1cec                  _aLineData
+                    0x1cf9                  _aLineMask
                     0x0804                  _g_GetchCallBack
 
 External Symbols in Program Memory (by address):
@@ -378,20 +378,20 @@ External Symbols in Program Memory (by address):
                   0x003754                  _Font_SetCurrentFont
                   0x003798                  _Font_GetNewSymbolData
                   0x00382a                  _Font_GetCurrentSymbolData
-                  0x003914                  _Interrupt__Setup
-                  0x003988                  _Interrupt__DisableAll
-                  0x003996                  _Interrupt__IsFrameEnd
-                  0x0039aa                  _Interrupt__ShowFrame
-                  0x0039c4                  _Interrupt__GetUART1RX
-                  0x0039d4                  _main
-                  0x003a30                  _PowerSavingMode
-                  0x003a5c                  _DelayMks
-                  0x003a7a                  _DelayMs
-                  0x003a9a                  _PeripheralsMap__GeneralMapping
-                  0x003ad4                  _HAL_SPI__TurnOff
-                  0x003adc                  _HAL_SPI__Init
-                  0x003aea                  _HAL_SPI__SendByte
-                  0x003b04                  _HAL_SPI__GetByte
+                  0x003916                  _Interrupt__Setup
+                  0x00398a                  _Interrupt__DisableAll
+                  0x003998                  _Interrupt__IsFrameEnd
+                  0x0039ac                  _Interrupt__ShowFrame
+                  0x0039c6                  _Interrupt__GetUART1RX
+                  0x0039d6                  _main
+                  0x003a32                  _PowerSavingMode
+                  0x003a5e                  _DelayMks
+                  0x003a7c                  _DelayMs
+                  0x003a9c                  _PeripheralsMap__GeneralMapping
+                  0x003ad6                  _HAL_SPI__TurnOff
+                  0x003ade                  _HAL_SPI__Init
+                  0x003aec                  _HAL_SPI__SendByte
+                  0x003b06                  _HAL_SPI__GetByte
                   0x008000                  _FlameAnimation
                   0x009964                  _Antonio_Regular_16_L1
                   0x00b276                  _BebasNeue_Bold_16_L1
@@ -404,10 +404,10 @@ External Symbols in Program Memory (by address):
                   0x00dec6                  _ArtsStrade
                   0x00e3da                  _Triden
                   0x00e8ee                  _BebasNeueRegular_12_L1
-                  0x00eea7                  _line1
-                  0x00eeb4                  _line2
-                  0x00eef0                  _CONST_MODE
-                  0x00eef2                  _CONS_STA
+                  0x00eea9                  _line1
+                  0x00eeb6                  _line2
+                  0x00eef2                  _CONST_MODE
+                  0x00eef4                  _CONS_STA
 
 External Symbols in Program Memory (by name):
 
@@ -418,13 +418,13 @@ External Symbols in Program Memory (by name):
                   0x00b276                  _BebasNeue_Bold_16_L1
                   0x00bd6e                  _BlankScreen1
                   0x00c282                  _BlankScreen2
-                  0x00eef0                  _CONST_MODE
-                  0x00eef2                  _CONS_STA
+                  0x00eef2                  _CONST_MODE
+                  0x00eef4                  _CONS_STA
                   0x0032bc                  _CheckButtons
                   0x0031e8                  _Clock_Init
                   0x003204                  _Clock_Task
-                  0x003a5c                  _DelayMks
-                  0x003a7a                  _DelayMs
+                  0x003a5e                  _DelayMks
+                  0x003a7c                  _DelayMs
                   0x008000                  _FlameAnimation
                   0x00382a                  _Font_GetCurrentSymbolData
                   0x00372a                  _Font_GetFontParam
@@ -443,24 +443,24 @@ External Symbols in Program Memory (by name):
                   0x0034d0                  _HAL_PIO__SetBuzzerOut
                   0x0034b4                  _HAL_PIO__SetInformLed
                   0x003496                  _HAL_PIO__TurnOff_IOPorts
-                  0x003b04                  _HAL_SPI__GetByte
-                  0x003adc                  _HAL_SPI__Init
-                  0x003aea                  _HAL_SPI__SendByte
-                  0x003ad4                  _HAL_SPI__TurnOff
+                  0x003b06                  _HAL_SPI__GetByte
+                  0x003ade                  _HAL_SPI__Init
+                  0x003aec                  _HAL_SPI__SendByte
+                  0x003ad6                  _HAL_SPI__TurnOff
                   0x003078                  _HAL_UART__CheckAndResetErrors
                   0x002f68                  _HAL_UART__SerialSetup
                   0x002f30                  _HAL_UART__SetExternGetch
                   0x002f3c                  _HAL_UART__TurnOff
                   0x00d49e                  _HelloWorld
-                  0x003988                  _Interrupt__DisableAll
-                  0x0039c4                  _Interrupt__GetUART1RX
-                  0x003996                  _Interrupt__IsFrameEnd
-                  0x003914                  _Interrupt__Setup
-                  0x0039aa                  _Interrupt__ShowFrame
+                  0x00398a                  _Interrupt__DisableAll
+                  0x0039c6                  _Interrupt__GetUART1RX
+                  0x003998                  _Interrupt__IsFrameEnd
+                  0x003916                  _Interrupt__Setup
+                  0x0039ac                  _Interrupt__ShowFrame
                   0x003344                  _IsCurrentTimeValid
                   0x00d9b2                  _Pepsi
-                  0x003a9a                  _PeripheralsMap__GeneralMapping
-                  0x003a30                  _PowerSavingMode
+                  0x003a9c                  _PeripheralsMap__GeneralMapping
+                  0x003a32                  _PowerSavingMode
                   0x0024d2                  _RTCC_BuildTimeGet
                   0x0027a2                  _RTCC_Initialize
                   0x00277c                  _RTCC_Start
@@ -544,11 +544,11 @@ External Symbols in Program Memory (by name):
                   0x0035f0                  _debug_task
                   0x0023d0                  _floorl
                   0x0031de                  _getch
-                  0x00eea7                  _line1
-                  0x00eeb4                  _line2
+                  0x00eea9                  _line1
+                  0x00eeb6                  _line2
                   0x00ceaa                  _m12_16_L1
                   0x00c796                  _m12_20_L1
-                  0x0039d4                  _main
+                  0x0039d6                  _main
                   0x0004b0                  _memcpy
                   0x0004be                  _memset
                   0x0031c6                  _putch
@@ -2385,37 +2385,37 @@ __xc_reference_data
  .bss               0x123c        0x514 build/default/production/_ext/1472/main_fclock.o
  .bss               0x1750        0x514 build/default/production/_ext/1472/debugging.o
 
-.data               0x1c64         0x84
+.data               0x1c64         0x88
  .data              0x1c64         0x42 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(stdout.XX_o)
                     0x1c64                  __stdout
                     0x1c66                  ___stdout_used
- .data              0x1ca6         0x26 build/default/production/_ext/1472/clock_task.o
+ .data              0x1ca6         0x2a build/default/production/_ext/1472/clock_task.o
                     0x1ca6                  _WeekDay
-                    0x1cb4                  _Month
- .data              0x1ccc         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o)
+                    0x1cb6                  _Month
+ .data              0x1cd0         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__printf_core.XX_o)
 
-.bss                0x1ce8         0x2c
- .bss               0x1ce8         0x1a build/default/production/_ext/1472/screen.o
-                    0x1ce8                  _aLineData
-                    0x1cf5                  _aLineMask
- .bss               0x1d02         0x12 build/default/production/_ext/2116421387/fonts.o
+.bss                0x1cec         0x2c
+ .bss               0x1cec         0x1a build/default/production/_ext/1472/screen.o
+                    0x1cec                  _aLineData
+                    0x1cf9                  _aLineMask
+ .bss               0x1d06         0x12 build/default/production/_ext/2116421387/fonts.o
 
-.data               0x1d14         0x20
- .data              0x1d14         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_a.XX_o)
- .data              0x1d24         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_fp.XX_o)
+.data               0x1d18         0x20
+ .data              0x1d18         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_a.XX_o)
+ .data              0x1d28         0x10 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__fmt_fp.XX_o)
 
-.bss                0x1d34          0x2
- .bss               0x1d34          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_lo)
-                    0x1d34                  ___errno_val
+.bss                0x1d38          0x2
+ .bss               0x1d38          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a(__errno_location.XX_lo)
+                    0x1d38                  ___errno_val
 
-.data               0x1d36          0x2
- .data              0x1d36          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(c30_uart.Meo)
-                    0x1d36                  ___C30_UART
+.data               0x1d3a          0x2
+ .data              0x1d3a          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(c30_uart.Meo)
+                    0x1d3a                  ___C30_UART
 
-.heap               0x1d38        0x100
- .heap              0x1d38        0x100 heap
-                    0x3a70                  __heap
-                    0x3b70                  __eheap
+.heap               0x1d3c        0x100
+ .heap              0x1d3c        0x100 heap
+                    0x3a78                  __heap
+                    0x3b78                  __eheap
 
 .ivt._T1Interrupt
                   0x00001a          0x2
@@ -2444,7 +2444,7 @@ __xc_reference_data
 .config_IESO      0x0157fc          0x2
  .config_IESO     0x0157fc          0x2 build/default/production/_ext/1472/main_fclock.o
 
-.const            0x008000       0x6ef4 load address 0x008000  
+.const            0x008000       0x6ef6 load address 0x008000  
  .const           0x008000       0x1964 build/default/production/_ext/1100913241/flame_animation1_100x500_L1.o
                   0x008000                  _FlameAnimation
  .const           0x009964       0x1912 build/default/production/_ext/2116421387/Antonio-Regular_16_L1.o
@@ -2469,15 +2469,15 @@ __xc_reference_data
  .const           0x00e8ee        0x4aa build/default/production/_ext/2116421387/BebasNeue-Regular_12_L1.o
                   0x00e8ee                  _BebasNeueRegular_12_L1
  .const           0x00ed98         0x80 build/default/production/_ext/1472/screen.o
- .const           0x00ee18         0x7c build/default/production/_ext/1472/clock_task.o
- .const           0x00ee94         0x2e build/default/production/_ext/1472/debugging.o
-                  0x00eea7                  _line1
-                  0x00eeb4                  _line2
- .const           0x00eec2         0x22 build/default/production/_ext/1472/main_fclock.o
- .const           0x00eee4          0xc build/default/production/_ext/1037427530/rtcc.o
- .const           0x00eef0          0x4 build/default/production/_ext/1037427530/uart_HAL.o
-                  0x00eef0                  _CONST_MODE
-                  0x00eef2                  _CONS_STA
+ .const           0x00ee18         0x7e build/default/production/_ext/1472/clock_task.o
+ .const           0x00ee96         0x2e build/default/production/_ext/1472/debugging.o
+                  0x00eea9                  _line1
+                  0x00eeb6                  _line2
+ .const           0x00eec4         0x22 build/default/production/_ext/1472/main_fclock.o
+ .const           0x00eee6          0xc build/default/production/_ext/1037427530/rtcc.o
+ .const           0x00eef2          0x4 build/default/production/_ext/1037427530/uart_HAL.o
+                  0x00eef2                  _CONST_MODE
+                  0x00eef4                  _CONS_STA
 
 .text             0x0024d2       0x1360
  .text            0x0024d2        0x654 build/default/production/_ext/1037427530/rtcc.o
@@ -2528,26 +2528,26 @@ __xc_reference_data
                   0x003798                  _Font_GetNewSymbolData
                   0x00382a                  _Font_GetCurrentSymbolData
 
-.dinit            0x003832         0xe2
- .dinit           0x003832         0xe2 data_init
+.dinit            0x003832         0xe4
+ .dinit           0x003832         0xe4 data_init
 
-.text             0x003914        0x1fa
- .text            0x003914         0xc0 build/default/production/_ext/1472/interrupts.o
-                  0x003914                  _Interrupt__Setup
-                  0x003988                  _Interrupt__DisableAll
-                  0x003996                  _Interrupt__IsFrameEnd
-                  0x0039aa                  _Interrupt__ShowFrame
-                  0x0039c4                  _Interrupt__GetUART1RX
- .text            0x0039d4         0x88 build/default/production/_ext/1472/main_fclock.o
-                  0x0039d4                  _main
-                  0x003a30                  _PowerSavingMode
- .text            0x003a5c         0x3e build/default/production/_ext/1472/delays.o
-                  0x003a5c                  _DelayMks
-                  0x003a7a                  _DelayMs
- .text            0x003a9a         0x3a build/default/production/_ext/1037427530/peripherals_map.o
-                  0x003a9a                  _PeripheralsMap__GeneralMapping
- .text            0x003ad4         0x3a build/default/production/_ext/1037427530/spi_HAL.o
-                  0x003ad4                  _HAL_SPI__TurnOff
-                  0x003adc                  _HAL_SPI__Init
-                  0x003aea                  _HAL_SPI__SendByte
-                  0x003b04                  _HAL_SPI__GetByte
+.text             0x003916        0x1fa
+ .text            0x003916         0xc0 build/default/production/_ext/1472/interrupts.o
+                  0x003916                  _Interrupt__Setup
+                  0x00398a                  _Interrupt__DisableAll
+                  0x003998                  _Interrupt__IsFrameEnd
+                  0x0039ac                  _Interrupt__ShowFrame
+                  0x0039c6                  _Interrupt__GetUART1RX
+ .text            0x0039d6         0x88 build/default/production/_ext/1472/main_fclock.o
+                  0x0039d6                  _main
+                  0x003a32                  _PowerSavingMode
+ .text            0x003a5e         0x3e build/default/production/_ext/1472/delays.o
+                  0x003a5e                  _DelayMks
+                  0x003a7c                  _DelayMs
+ .text            0x003a9c         0x3a build/default/production/_ext/1037427530/peripherals_map.o
+                  0x003a9c                  _PeripheralsMap__GeneralMapping
+ .text            0x003ad6         0x3a build/default/production/_ext/1037427530/spi_HAL.o
+                  0x003ad6                  _HAL_SPI__TurnOff
+                  0x003ade                  _HAL_SPI__Init
+                  0x003aec                  _HAL_SPI__SendByte
+                  0x003b06                  _HAL_SPI__GetByte
