@@ -8,7 +8,7 @@ extern "C" {
 #include "../definitions.h"
 
 typedef enum {
-	SCREEN__FLAME_CLOCK,
+	SCREEN__FLAME_CLOCK_ONE,
 } ScreenNames_t;
 
 

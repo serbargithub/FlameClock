@@ -43,6 +43,8 @@
         <itemPath>../Peripferals/uart_24F_definitions.h</itemPath>
         <itemPath>../Peripferals/rtcc.h</itemPath>
         <itemPath>../Peripferals/rtcc.c</itemPath>
+        <itemPath>../Peripferals/log_HAL.c</itemPath>
+        <itemPath>../Peripferals/log_HAL.h</itemPath>
       </logicalFolder>
       <logicalFolder name="screens" displayName="screens" projectFiles="true">
         <itemPath>../screens/screens.c</itemPath>
@@ -62,6 +64,8 @@
       <itemPath>../clock_task.c</itemPath>
       <itemPath>../display_utils.c</itemPath>
       <itemPath>../display_utils.h</itemPath>
+      <itemPath>../log.h</itemPath>
+      <itemPath>../log.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -10,8 +10,8 @@ CURRENT_SCREEN_DRAW g_CurrentScreenDraw_CallBack;
 void Screens__SetCurrentScreen(ScreenNames_t screenName) {
 
     switch (screenName) {
-        case SCREEN__FLAME_CLOCK:
-            g_CurrentScreenDraw_CallBack = ScreenDraw__flame_clock;
+        case SCREEN__FLAME_CLOCK_ONE:
+            g_CurrentScreenDraw_CallBack = ScreenDraw__FlameClockOne;
             break;
         default:
             break;

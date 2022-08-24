@@ -5,7 +5,7 @@
 #include "../fonts/fonts.h"
 
 
-void ScreenDraw__flame_clock(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime) {
+void ScreenDraw__FlameClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime) {
 
     memset(displayFrame->data, 0xFF, sizeof (DisplayFrame_t));
     Font_SetCurrentFont(FONT_ANTONIO_REGULAR_SIZE16);

@@ -31,7 +31,7 @@ void Clock_Init(void) {
         RTCC_BuildTimeGet(&g_DataTime);
         RTCC_Initialize(&g_DataTime);
     }
-    Screens__SetCurrentScreen(SCREEN__FLAME_CLOCK);
+    Screens__SetCurrentScreen(SCREEN__FLAME_CLOCK_ONE);
     Screens__DrawCurrentScreen(&g_ClockFrame, &g_DataTime);
 }
 

@@ -8,12 +8,10 @@
 #include "Peripferals/peripherals_HAL.h"
 #include "Peripferals/uart_HAL.h"
 #include "Peripferals/spi_HAL.h"
-#include "interrupts.h"
 #include "images/screens_static.h"
-#include "fonts/fonts.h"
-#include "display_utils.h"
-#include "debugging.h"
+#include "interrupts.h"
 #include "clock_task.h"
+#include "log.h"
 
 
 // PIC24FJ128GA106
@@ -58,7 +56,7 @@ int main(void) {
 
     memcpy(g_PreparedFrame.data, ArtsStrade, sizeof (ArtsStrade));
     Interrupt__ShowFrame(&g_PreparedFrame);
-    printf("\r\nStart.");
+    DebugMsg("\r\nStart.");
     HAL_UART__CheckAndResetErrors(UART_CH1);
     DelayMs(1000);
 
@@ -75,7 +73,7 @@ int main(void) {
 
 void PowerSavingMode() {
 
-    printf("\r\nEnter Power save mode.");
+    DebugMsg("\r\nEnter Power save mode.");
     Interrupt__DisableAll();
     HAL_UART__TurnOff(UART_CH1);
     HAL_SPI__TurnOff();

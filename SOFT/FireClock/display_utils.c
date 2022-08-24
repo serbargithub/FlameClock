@@ -1,6 +1,7 @@
 #include <p24Fxxxx.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdio.h>
 #include <stdarg.h> 
 #include "definitions.h"
 #include "fonts/fonts.h"

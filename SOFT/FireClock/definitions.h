@@ -17,9 +17,7 @@ extern "C" {
 
 #define HORIZONTAL_BYTES_MAX 13
 #define HORIZONTAL_PIXEL_MAX 100
-#define VERTICAL_LINES_MAX 100    
-    
-#define MAX_BUF_RX_COM 254
+#define VERTICAL_LINES_MAX 100      
     
 typedef struct
 {
