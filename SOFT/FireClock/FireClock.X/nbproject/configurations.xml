@@ -45,10 +45,10 @@
         <itemPath>../Peripferals/rtcc.c</itemPath>
       </logicalFolder>
       <logicalFolder name="screens" displayName="screens" projectFiles="true">
-        <itemPath>../screens/flame_clock.c</itemPath>
-        <itemPath>../screens/flame_clock.h</itemPath>
         <itemPath>../screens/screens.c</itemPath>
         <itemPath>../screens/screens.h</itemPath>
+        <itemPath>../screens/screen_flame_clock.h</itemPath>
+        <itemPath>../screens/screen_flame_clock.c</itemPath>
       </logicalFolder>
       <itemPath>../definitions.h</itemPath>
       <itemPath>../interrupts.c</itemPath>

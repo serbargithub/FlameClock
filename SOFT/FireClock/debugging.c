@@ -35,15 +35,6 @@ void debug_task(void) {
             memcpy(g_DebugFrame.data, BlankScreen1, sizeof (BlankScreen1));
             Interrupt__ShowFrame(&g_DebugFrame);
         }
-        if (rByte == '1') {
-            line = 1;
-            memcpy(g_DebugFrame.data, BlankScreen2, sizeof (BlankScreen2));
-            Font_SetCurrentFont(FONT_BEBAS_BOLD_SIZE16);
-            static uint8_t X = 0;
-            Display_Printf(&g_DebugFrame, X, 30, "Test:%i", X);
-            Interrupt__ShowFrame(&g_DebugFrame);
-            X++;
-        }
         /*
         if (rByte == '2') {
             line = 2;

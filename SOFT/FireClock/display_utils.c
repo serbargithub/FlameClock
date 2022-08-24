@@ -8,8 +8,11 @@
 
 
 static uint8_t g_CurrentPositionX, g_CurrentPositionY;
-uint8_t aLineData[HORIZONTAL_BYTES_MAX];
-uint8_t aLineMask[HORIZONTAL_BYTES_MAX];
+static uint8_t aLineData[HORIZONTAL_BYTES_MAX];
+static uint8_t aLineMask[HORIZONTAL_BYTES_MAX];
+
+const char *WeekDay[] = {"", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat", "Sun"};
+const char *Month[] = {"", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
 uint8_t ShiftRightByBytes(uint8_t shiftValue) {
 

@@ -6,19 +6,16 @@
 #include <string.h>
 #include "delays.h"
 #include "definitions.h"
+#include "interrupts.h"
 #include "Peripferals/peripherals_HAL.h"
 #include "Peripferals/uart_HAL.h"
-#include "interrupts.h"
-#include "fonts/fonts.h"
 #include "Peripferals/rtcc.h"
-#include "display_utils.h"
+#include "screens/screens.h"
 
 
 static RTCC_DATETIME g_DataTime;
 static DisplayFrame_t g_ClockFrame;
 
-const char *WeekDay[] = {"", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat", "Sun"};
-const char *Month[] = {"", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
 void CheckButtons(void);
 bool IsCurrentTimeValid(void);
@@ -33,8 +30,9 @@ void Clock_Init(void) {
     if (IsCurrentTimeValid() == false) {
         RTCC_BuildTimeGet(&g_DataTime);
         RTCC_Initialize(&g_DataTime);
-    }    
-    memset(&g_ClockFrame, 0xFF, sizeof(g_ClockFrame));
+    }
+    Screens__SetCurrentScreen(SCREEN__FLAME_CLOCK);
+    Screens__DrawCurrentScreen(&g_ClockFrame, &g_DataTime);
 }
 
 void Clock_Task(void) {
@@ -46,17 +44,8 @@ void Clock_Task(void) {
     if (previousSecond != g_DataTime.second) {
         previousSecond = g_DataTime.second;
         Interrupt__ShowFrame(&g_ClockFrame);
-        
         CheckButtons();
-        memset(g_ClockFrame.data, 0xFF, sizeof (g_ClockFrame));
-        Font_SetCurrentFont(FONT_ANTONIO_REGULAR_SIZE16);
-        Display_Printf(&g_ClockFrame, 15, 5, "Flame clock");
-        Font_SetCurrentFont(FONT_M12_SIZE20);
-        Display_Printf(&g_ClockFrame, 10, 35, "%02i.%02i", g_DataTime.hour, g_DataTime.minute);
-        Font_SetCurrentFont(FONT_M12_SIZE16);
-        Display_Printf(&g_ClockFrame, 65, 64, "%02i", g_DataTime.second);
-        Font_SetCurrentFont(FONT_BEBAS_BOLD_SIZE16);
-        Display_Printf(&g_ClockFrame, 5, 83, "%s, %02i  %s  20%02i", WeekDay[g_DataTime.weekday], g_DataTime.day, Month[g_DataTime.month], g_DataTime.year );
+        Screens__DrawCurrentScreen(&g_ClockFrame, &g_DataTime);
     }
 }
 

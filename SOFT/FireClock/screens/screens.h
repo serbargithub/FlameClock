@@ -4,11 +4,16 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+    
+#include "../definitions.h"
 
 typedef enum {
-	SCREEN_FLAME_CLOCK,
+	SCREEN__FLAME_CLOCK,
 } ScreenNames_t;
 
+
+void Screens__SetCurrentScreen(ScreenNames_t screenName);
+void Screens__DrawCurrentScreen(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime);
 
 #ifdef	__cplusplus
 }

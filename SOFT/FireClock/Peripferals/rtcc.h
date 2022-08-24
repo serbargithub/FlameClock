@@ -16,21 +16,11 @@ limitations under the License.
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "../definitions.h"
 
 #ifndef _RTCC_H
 #define _RTCC_H
 
-typedef struct
-{
-    bool bcdFormat;
-    uint8_t year;
-    uint8_t month;
-    uint8_t day;
-    uint8_t weekday;
-    uint8_t hour;
-    uint8_t minute;
-    uint8_t second;
-} RTCC_DATETIME;
 
 void RTCC_Start();
 void RTCC_Initialize (RTCC_DATETIME * value);

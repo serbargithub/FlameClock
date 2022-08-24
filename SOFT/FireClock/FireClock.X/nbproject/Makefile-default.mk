@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../screens/flame_clock.c ../screens/screens.c
+SOURCEFILES_QUOTED_IF_SPACED=../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../screens/screens.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../screens/screen_flame_clock.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/245878840/flame_clock.o ${OBJECTDIR}/_ext/245878840/screens.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2116421387/fonts.o.d ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o.d ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o.d ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o.d ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o.d ${OBJECTDIR}/_ext/1037427530/uart_HAL.o.d ${OBJECTDIR}/_ext/1037427530/spi_HAL.o.d ${OBJECTDIR}/_ext/1037427530/rtcc.o.d ${OBJECTDIR}/_ext/1472/interrupts.o.d ${OBJECTDIR}/_ext/1472/main_fclock.o.d ${OBJECTDIR}/_ext/1472/delays.o.d ${OBJECTDIR}/_ext/1472/debugging.o.d ${OBJECTDIR}/_ext/1472/clock_task.o.d ${OBJECTDIR}/_ext/1472/display_utils.o.d ${OBJECTDIR}/_ext/245878840/flame_clock.o.d ${OBJECTDIR}/_ext/245878840/screens.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/245878840/screens.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2116421387/fonts.o.d ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o.d ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o.d ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o.d ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o.d ${OBJECTDIR}/_ext/1037427530/uart_HAL.o.d ${OBJECTDIR}/_ext/1037427530/spi_HAL.o.d ${OBJECTDIR}/_ext/1037427530/rtcc.o.d ${OBJECTDIR}/_ext/245878840/screens.o.d ${OBJECTDIR}/_ext/1472/interrupts.o.d ${OBJECTDIR}/_ext/1472/main_fclock.o.d ${OBJECTDIR}/_ext/1472/delays.o.d ${OBJECTDIR}/_ext/1472/debugging.o.d ${OBJECTDIR}/_ext/1472/clock_task.o.d ${OBJECTDIR}/_ext/1472/display_utils.o.d ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/245878840/flame_clock.o ${OBJECTDIR}/_ext/245878840/screens.o
+OBJECTFILES=${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/245878840/screens.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o
 
 # Source Files
-SOURCEFILES=../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../screens/flame_clock.c ../screens/screens.c
+SOURCEFILES=../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../screens/screens.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../screens/screen_flame_clock.c
 
 
 
@@ -197,6 +197,12 @@ ${OBJECTDIR}/_ext/1037427530/rtcc.o: ../Peripferals/rtcc.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1037427530/rtcc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../Peripferals/rtcc.c  -o ${OBJECTDIR}/_ext/1037427530/rtcc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1037427530/rtcc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/_ext/245878840/screens.o: ../screens/screens.c  .generated_files/flags/default/78d36b73a54c3c641ff760e91f14a4d274fe3807 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o.d 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screens.c  -o ${OBJECTDIR}/_ext/245878840/screens.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screens.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/_ext/1472/interrupts.o: ../interrupts.c  .generated_files/flags/default/517ffdab6ec3e9f56d72a5a28775dcbb78a3ead8 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/interrupts.o.d 
@@ -233,17 +239,11 @@ ${OBJECTDIR}/_ext/1472/display_utils.o: ../display_utils.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1472/display_utils.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../display_utils.c  -o ${OBJECTDIR}/_ext/1472/display_utils.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/display_utils.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/245878840/flame_clock.o: ../screens/flame_clock.c  .generated_files/flags/default/cb6a9a0500a6a09b97b34f6335d36feac782e691 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+${OBJECTDIR}/_ext/245878840/screen_flame_clock.o: ../screens/screen_flame_clock.c  .generated_files/flags/default/fa9510b17dffd475bf52aa6d6d7ca77e41fccdd6 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
-	@${RM} ${OBJECTDIR}/_ext/245878840/flame_clock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/245878840/flame_clock.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/flame_clock.c  -o ${OBJECTDIR}/_ext/245878840/flame_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/flame_clock.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/_ext/245878840/screens.o: ../screens/screens.c  .generated_files/flags/default/78d36b73a54c3c641ff760e91f14a4d274fe3807 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o.d 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screens.c  -o ${OBJECTDIR}/_ext/245878840/screens.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screens.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_flame_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
 ${OBJECTDIR}/_ext/2116421387/fonts.o: ../fonts/fonts.c  .generated_files/flags/default/131d33463c344748b458abb6ed119feb03970944 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
@@ -348,6 +348,12 @@ ${OBJECTDIR}/_ext/1037427530/rtcc.o: ../Peripferals/rtcc.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1037427530/rtcc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../Peripferals/rtcc.c  -o ${OBJECTDIR}/_ext/1037427530/rtcc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1037427530/rtcc.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/_ext/245878840/screens.o: ../screens/screens.c  .generated_files/flags/default/3b4db2bc2e250227c9de30cd1a2828ff4d9f30f5 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o.d 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screens.c  -o ${OBJECTDIR}/_ext/245878840/screens.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screens.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/_ext/1472/interrupts.o: ../interrupts.c  .generated_files/flags/default/d796a0257d21435bd3900be078dc6f9e69d1ec04 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/interrupts.o.d 
@@ -384,17 +390,11 @@ ${OBJECTDIR}/_ext/1472/display_utils.o: ../display_utils.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1472/display_utils.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../display_utils.c  -o ${OBJECTDIR}/_ext/1472/display_utils.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/display_utils.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/245878840/flame_clock.o: ../screens/flame_clock.c  .generated_files/flags/default/cb2c1b84e9580474c8148405eef82e6872abce6 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+${OBJECTDIR}/_ext/245878840/screen_flame_clock.o: ../screens/screen_flame_clock.c  .generated_files/flags/default/863d6cbc81bf17652ff96dc5392e26260e22be4e .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
-	@${RM} ${OBJECTDIR}/_ext/245878840/flame_clock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/245878840/flame_clock.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/flame_clock.c  -o ${OBJECTDIR}/_ext/245878840/flame_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/flame_clock.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/_ext/245878840/screens.o: ../screens/screens.c  .generated_files/flags/default/3b4db2bc2e250227c9de30cd1a2828ff4d9f30f5 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o.d 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screens.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screens.c  -o ${OBJECTDIR}/_ext/245878840/screens.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screens.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_flame_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

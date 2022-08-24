@@ -5,6 +5,7 @@
 extern "C" {
 #endif
     
+#include <stdbool.h>    
 #include <stdint.h>
 
 #define	DEVICE_NAME "FlameClock"
@@ -19,6 +20,18 @@ extern "C" {
 #define VERTICAL_LINES_MAX 100    
     
 #define MAX_BUF_RX_COM 254
+    
+typedef struct
+{
+    bool bcdFormat;
+    uint8_t year;
+    uint8_t month;
+    uint8_t day;
+    uint8_t weekday;
+    uint8_t hour;
+    uint8_t minute;
+    uint8_t second;
+} RTCC_DATETIME;
 
 typedef struct {
     uint8_t data[VERTICAL_LINES_MAX][HORIZONTAL_BYTES_MAX];
