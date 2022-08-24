@@ -12,7 +12,6 @@ extern "C" {
 #define	BUILD_TIME  __TIME__
 #define	BUILD_DATE  __DATE__
 
-
 //-------
 
 #define HORIZONTAL_BYTES_MAX 13

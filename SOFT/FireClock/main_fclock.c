@@ -11,7 +11,7 @@
 #include "interrupts.h"
 #include "images/screens_static.h"
 #include "fonts/fonts.h"
-#include "screen.h"
+#include "display_utils.h"
 #include "debugging.h"
 #include "clock_task.h"
 
@@ -65,7 +65,7 @@ int main(void) {
     DelayMs(1000);
 
     while (1) {
-        DelayMs(200);
+        DelayMs(20);
         if (HAL_ADC__GetPowerState() == 0) {
             PowerSavingMode();
             return; //full reset

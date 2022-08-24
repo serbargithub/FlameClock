@@ -17,7 +17,6 @@ static bool g_EndOfFrameFlag;
 
 void _ISR_PSV _T1Interrupt(void) {
 
-
     static uint8_t countV;
     for (int8_t countH = (HORIZONTAL_BYTES_MAX - 1); countH >= 0; countH--) {
         unsigned char byteToSend = g_DisplayFrame.data [countV][countH] / 16;
@@ -30,8 +29,6 @@ void _ISR_PSV _T1Interrupt(void) {
     uint8_t decLow = countV - decHigh * 10;
     uint8_t sendDec = decHigh * 16 + decLow;
     HAL_SPI__SendByte(sendDec);
-
-    // HAL_SPI__SendByte(countV);
     HAL_PIO__DisplayLatch(PIN_ON);
     HAL_PIO__DisplayLatch(PIN_OFF);
     countV++;
@@ -64,28 +61,6 @@ void _ISR_PSV _CNInterrupt(void) {
     _CNIF = 0;
 }
 
-/*
-void _ISR _U2RXInterrupt(void) {
-    static unsigned char tempRX;
-    tempRX = U2RXREG;
-    _U2RXIF = 0;
-}
-//--
-
-void _ISR _U3RXInterrupt(void) {
-    static unsigned char tempRX;
-    tempRX = U3RXREG;
-    _U3RXIF = 0;
-}
-//--
-
-void _ISR _U4RXInterrupt(void) {
-    static unsigned char tempRX;
-    tempRX = U4RXREG;
-    _U4RXIF = 0;
-}
- */
-
 void Interrupt__Setup(void) {
 
     _T1IP = 4; // this is the default value anyway
@@ -109,9 +84,6 @@ void Interrupt__Setup(void) {
 
     _U1RXIF = 0;
     _U1RXIE = 1;
-    
- //   _CN30IE = 1;    
- //   _CNIE   = 1;    // enable input on change interrupt 
 
     // 2.3 init the processor priority level
     _IPL = 0; // this is the default value anyway
