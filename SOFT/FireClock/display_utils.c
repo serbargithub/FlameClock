@@ -137,7 +137,7 @@ bool Display_PutPixel(DisplayFrame_t* displayFrame, uint8_t screenX, uint8_t scr
     return true;
 }
 
-bool Display_SetImage(DisplayFrame_t* displayFrame, uint8_t* imageData, uint16_t imageSize) {
+bool Display_SetImage(DisplayFrame_t* displayFrame, const uint8_t* imageData, uint16_t imageSize) {
 
     if (imageSize > sizeof (DisplayFrame_t)) {
         imageSize = sizeof (DisplayFrame_t);

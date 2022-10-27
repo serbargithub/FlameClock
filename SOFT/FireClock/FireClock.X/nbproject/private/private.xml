@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/graphics/draw.c</file>
             <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/display_utils.c</file>
-            <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/screens/screens.c</file>
-            <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/graphics/draw.h</file>
+            <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/main_fclock.c</file>
+            <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/screens/screen_analog_clock.c</file>
             <file>file:/D:/MY_director/SYNHR_WORK/PROJECTS_FULL/GIP1000/SOFT/FireClock/display_utils.h</file>
         </group>
     </open-files>

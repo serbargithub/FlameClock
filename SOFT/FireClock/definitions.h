@@ -35,6 +35,19 @@ typedef struct {
     uint8_t data[VERTICAL_LINES_MAX][HORIZONTAL_BYTES_MAX];
 } DisplayFrame_t;
 
+typedef enum
+{
+    AJUST_MODE__OFF = 0,
+    AJUST_MODE__HOURS,
+    AJUST_MODE__MINUTES,
+    AJUST_MODE__SECONDS,
+    AJUST_MODE__WEEKS,
+    AJUST_MODE__DAYS,
+    AJUST_MODE__MONTHS,
+    AJUST_MODE__YEARS,
+    AJUST_MODE__THE_LAST,  
+} AdjustingMode_t;
+
 #ifdef	__cplusplus
 }
 #endif

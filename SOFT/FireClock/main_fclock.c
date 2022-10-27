@@ -11,6 +11,7 @@
 #include "images/screens_static.h"
 #include "interrupts.h"
 #include "clock_task.h"
+#include "display_utils.h"
 #include "log.h"
 #include "crypto/firmware_decoder.h"
 
@@ -54,8 +55,7 @@ int main(void) {
     HAL_PIO__BuckUp1Out(PIN_ON);
     DelayMs(200);
     HAL_PIO__BuckUp2Out(PIN_ON);
-
-    memcpy(g_PreparedFrame.data, ArtsStrade, sizeof (ArtsStrade));
+    Display_SetImage(&g_PreparedFrame, (const uint8_t*)ArtsStrade, sizeof (ArtsStrade));
     Interrupt__ShowFrame(&g_PreparedFrame);
     DebugMsg("\r\nStart.");
     HAL_UART__CheckAndResetErrors(UART_CH1);

@@ -69,9 +69,9 @@ int second;
 int min;
 int hour;
 
-void ScreenDraw__AnalogClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime) {
+void ScreenDraw__AnalogClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime, AdjustingMode_t adjustMode) {
 
-    Display_SetImage(displayFrame, (uint8_t*) AnalogClock, sizeof (AnalogClock));
+    Display_SetImage(displayFrame, (const uint8_t*)AnalogClock, sizeof (AnalogClock));
     Draw__Object(displayFrame, ArrowHours, 51, 50, dataTime->hour * 30 + dataTime->minute/2 );
     Draw__Object(displayFrame, ArrowMinutes, 51, 50, dataTime->minute * 6);
     Draw__Object(displayFrame, ArrowSeconds, 51, 50, dataTime->second * 6);

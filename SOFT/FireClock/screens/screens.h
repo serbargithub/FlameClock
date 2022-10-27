@@ -14,7 +14,7 @@ typedef enum {
 
 
 void Screens__SetCurrentScreen(ScreenNames_t screenName);
-void Screens__DrawCurrentScreen(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime);
+void Screens__DrawCurrentScreen(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime, AdjustingMode_t adjustMode);
 
 #ifdef	__cplusplus
 }

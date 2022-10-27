@@ -7,7 +7,7 @@ extern "C" {
 #include "../definitions.h" 
 
 void ScreenInit__AnalogClockOne();
-void ScreenDraw__AnalogClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime);
+void ScreenDraw__AnalogClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime, AdjustingMode_t adjustMode);
 
 
 #ifdef	__cplusplus
