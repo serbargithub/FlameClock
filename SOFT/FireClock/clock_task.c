@@ -15,7 +15,8 @@
 
 static RTCC_DATETIME g_DataTime;
 static DisplayFrame_t g_ClockFrame;
-
+static uint16_t g_CurrentScreenNumber = 0;
+#define SCREEN_NUMBER_MAX 2
 
 void CheckButtons(void);
 bool IsCurrentTimeValid(void);
@@ -31,7 +32,9 @@ void Clock_Init(void) {
         RTCC_BuildTimeGet(&g_DataTime);
         RTCC_Initialize(&g_DataTime);
     }
+    g_CurrentScreenNumber = 0;
     Screens__SetCurrentScreen(SCREEN__FLAME_CLOCK_ONE);
+    //Screens__SetCurrentScreen(SCREEN__ANALOG_CLOCK_ONE);
     Screens__DrawCurrentScreen(&g_ClockFrame, &g_DataTime);
 }
 
@@ -49,14 +52,38 @@ void Clock_Task(void) {
     }
 }
 
+void SetNextScreen(void) {
+    
+    g_CurrentScreenNumber++;
+    if (g_CurrentScreenNumber >= SCREEN_NUMBER_MAX) {
+        g_CurrentScreenNumber = 0;
+    }
+    switch (g_CurrentScreenNumber) {
+        case 0:
+            Screens__SetCurrentScreen(SCREEN__FLAME_CLOCK_ONE);
+            break;
+        case 1:
+            Screens__SetCurrentScreen(SCREEN__ANALOG_CLOCK_ONE);
+            break;
+        default:
+            break;
+    }
+}
+
 void CheckButtons(void) {
 
+
+    //if (!HAL_PIO__GetButtonState(BUTTON1)) {
+    //    if (g_DataTime.hour < 23) {
+    //        g_DataTime.hour++;
+    //        RTCC_Initialize(&g_DataTime);
+    //    }
+    //}
+    
     if (!HAL_PIO__GetButtonState(BUTTON1)) {
-        if (g_DataTime.hour < 23) {
-            g_DataTime.hour++;
-            RTCC_Initialize(&g_DataTime);
-        }
+        SetNextScreen();
     }
+    
     if (!HAL_PIO__GetButtonState(BUTTON2)) {
         if (g_DataTime.hour > 0) {
             g_DataTime.hour--;

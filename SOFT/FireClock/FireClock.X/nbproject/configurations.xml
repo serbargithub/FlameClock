@@ -12,6 +12,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+        <itemPath>../crypto/AES.h</itemPath>
+        <itemPath>../crypto/AES.s</itemPath>
+        <itemPath>../crypto/firmware_decoder.c</itemPath>
+        <itemPath>../crypto/firmware_decoder.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="fonts" displayName="fonts" projectFiles="true">
         <itemPath>../fonts/fonts.h</itemPath>
         <itemPath>../fonts/fonts.c</itemPath>
@@ -21,6 +27,10 @@
         <itemPath>../fonts/BebasNeue-Bold_16_L1.c</itemPath>
         <itemPath>../fonts/m12_16_L1.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="graphics" displayName="graphics" projectFiles="true">
+        <itemPath>../graphics/draw.c</itemPath>
+        <itemPath>../graphics/draw.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="images" displayName="images" projectFiles="true">
         <itemPath>../images/HelloWorld_100x100_L1.c</itemPath>
         <itemPath>../images/screens_static.h</itemPath>
@@ -29,6 +39,7 @@
         <itemPath>../images/flame_animation1_100x500_L1.c</itemPath>
         <itemPath>../images/artstrade_100x100_mono_100x100_L1.c</itemPath>
         <itemPath>../images/triden_100x100_L1.c</itemPath>
+        <itemPath>../images/clock1_100x100_L1.c</itemPath>
       </logicalFolder>
       <logicalFolder name="Peripferals" displayName="Peripferals" projectFiles="true">
         <itemPath>../Peripferals/io_ports_names.h</itemPath>
@@ -51,6 +62,8 @@
         <itemPath>../screens/screens.h</itemPath>
         <itemPath>../screens/screen_flame_clock.h</itemPath>
         <itemPath>../screens/screen_flame_clock.c</itemPath>
+        <itemPath>../screens/screen_analog_clock.c</itemPath>
+        <itemPath>../screens/screen_analog_clock.h</itemPath>
       </logicalFolder>
       <itemPath>../definitions.h</itemPath>
       <itemPath>../interrupts.c</itemPath>

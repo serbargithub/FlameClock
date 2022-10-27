@@ -1,0 +1,17 @@
+#ifndef _SCREEN_ANALOG_CLOCK_H_
+#define _SCREEN_ANALOG_CLOCK_H_
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
+#include "../definitions.h" 
+
+void ScreenInit__AnalogClockOne();
+void ScreenDraw__AnalogClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime);
+
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif //_SCREEN_ANALOG_CLOCK_H_

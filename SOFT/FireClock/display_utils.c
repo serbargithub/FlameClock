@@ -118,3 +118,31 @@ bool Display_Printf(DisplayFrame_t* displayFrame, uint8_t screenX, uint8_t scree
     }
     return true;
 }
+
+bool Display_PutPixel(DisplayFrame_t* displayFrame, uint8_t screenX, uint8_t screenY, uint8_t color) {
+
+    if ((screenX > HORIZONTAL_PIXEL_MAX) || (screenX > VERTICAL_LINES_MAX)) {
+        return false;
+    }
+    memset(aLineData, 0xFF, sizeof (aLineData));
+    memset(aLineMask, 0, sizeof (aLineData));
+
+    if (color) {
+        aLineData[0] = 0x7F;
+    }
+    aLineMask[0] = 0x80;
+
+    ShiftRightPreparedLine(screenX);
+    AddPreparedLineToScreen(displayFrame, screenY);
+    return true;
+}
+
+bool Display_SetImage(DisplayFrame_t* displayFrame, uint8_t* imageData, uint16_t imageSize) {
+
+    if (imageSize > sizeof (DisplayFrame_t)) {
+        imageSize = sizeof (DisplayFrame_t);
+    }
+    memcpy(displayFrame->data, imageData, imageSize);
+
+    return true;
+}

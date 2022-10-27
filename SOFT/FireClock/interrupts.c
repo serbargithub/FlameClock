@@ -73,7 +73,8 @@ void Interrupt__Setup(void) {
 
     TMR1 = 0; // clear the timer
     TMR2 = 0; // clear the timer
-    PR1 = 4740 - 1;//1580 - 1; //3200 - 1; // set the period register 2500 Hz 
+    //PR1 = 1580 - 1; //16mHz 3200 - 1; // set the period register 2500 Hz 
+    PR1 = 4740 - 1; //64 mHz 1580 - 1; //3200 - 1; // set the period register 2500 Hz 
     PR2 = 8000 - 1; // set the period register 1 kHz
     T1CON = 0x8000; // enabled, prescaler 1:1, internal clock  
     T2CON = 0x8000; // enabled, prescaler 1:1, internal clock   system tick RTOS

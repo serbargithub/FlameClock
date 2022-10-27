@@ -17,4 +17,3 @@ void ScreenDraw__FlameClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* data
     Font_SetCurrentFont(FONT_BEBAS_BOLD_SIZE16);
     Display_Printf(displayFrame, 5, 83, "%s, %02i  %s  20%02i", WeekDay[dataTime->weekday], dataTime->day, Month[dataTime->month], dataTime->year);
 }
-

@@ -35,7 +35,7 @@ void HAL_UART__TurnOff(UART_Channel_t uartChannel) {
 void HAL_UART__SerialSetup(UART_Speed_t serialSpeed, UART_Channel_t uartChannel) {
 
     unsigned int UART_value, BRG_value;
-
+// calculated for 64mHz
     switch (serialSpeed) {
         case UART_SPEED_2400:
             UART_value = UART_BRGH_SIXTEEN;

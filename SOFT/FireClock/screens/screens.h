@@ -9,6 +9,7 @@ extern "C" {
 
 typedef enum {
 	SCREEN__FLAME_CLOCK_ONE,
+    SCREEN__ANALOG_CLOCK_ONE,
 } ScreenNames_t;
 
 

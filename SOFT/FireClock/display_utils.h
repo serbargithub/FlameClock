@@ -14,6 +14,8 @@ extern "C" {
     bool Display_PutSymbol(DisplayFrame_t* displayFrame, uint8_t screenX, uint8_t screenY, char symbol);
     bool Display_PutNextSymbol(DisplayFrame_t* displayFrame, char symbol);
     bool Display_Printf(DisplayFrame_t* displayFrame, uint8_t screenX, uint8_t screenY, char* strToPrint, ...);
+    bool Display_PutPixel(DisplayFrame_t* displayFrame, uint8_t screenX, uint8_t screenY, uint8_t color);
+    bool Display_SetImage(DisplayFrame_t* displayFrame, uint8_t* imageData, uint16_t imageSize);
 
 #ifdef	__cplusplus
 }
