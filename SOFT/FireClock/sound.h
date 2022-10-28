@@ -6,6 +6,7 @@ extern "C" {
 #endif
 
 void Sound__KeyBeep();
+void Sound__Beep(uint16_t freq_Hz, uint16_t time_ms);
 
 #ifdef	__cplusplus
 }

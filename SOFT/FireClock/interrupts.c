@@ -138,9 +138,9 @@ char Interrupt__GetUART1RX() {
     return dataRead;
 }
 
-void Interrupt__PlaySound(uint16_t freq, uint16_t time) {
+void Interrupt__PlaySound(uint16_t freq_Hz, uint16_t time_Ms) {
 #define TIMER3_CLOCK (32000000/8)
 #define SOUND_FREQ_CLOCK (TIMER3_CLOCK / 4)  
-    PR3 = SOUND_FREQ_CLOCK / (uint32_t)freq - 1; // set the period register Hz
-    g_SoundTimeCounter = (uint32_t)time * (uint32_t)freq / 250 ;
+    PR3 = SOUND_FREQ_CLOCK / (uint32_t)freq_Hz - 1; // set the period register Hz
+    g_SoundTimeCounter = (uint32_t)time_Ms * (uint32_t)freq_Hz / 250 ;
 }

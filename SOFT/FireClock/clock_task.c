@@ -88,13 +88,25 @@ void HandleAjustTimer() {
     }
 }
 
+bool CheckButtonState(ButtonsName_t button) {
+
+    if (!HAL_PIO__GetButtonState(button)) {
+        DelayMs(100);
+        if (!HAL_PIO__GetButtonState(button)) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
 void CheckButtons(void) {
 
-    if (!HAL_PIO__GetButtonState(BUTTON1)) {
-        Sound__KeyBeep();
+    if (!CheckButtonState(BUTTON1)) {
+        Sound__Beep(1200, 200);
         SetNextScreen();
     }
-    if (!HAL_PIO__GetButtonState(BUTTON2)) {
+    if (!CheckButtonState(BUTTON2)) {
+        Sound__Beep(1000, 50);
         g_TimerAdjustMode = 10;
         g_AdjustMode = Screens__GetNextAdjustMode(g_AdjustMode);
         if (g_AdjustMode >= AJUST_MODE__THE_LAST) {
@@ -102,11 +114,13 @@ void CheckButtons(void) {
         }
     }
     if (g_AdjustMode > AJUST_MODE__OFF) {
-        if (!HAL_PIO__GetButtonState(BUTTON3)) {
+        if (!CheckButtonState(BUTTON3)) {
+            Sound__Beep(1000, 50);
             g_TimerAdjustMode = 10;
             Adjusting__AdjustParametr(&g_DataTime, g_AdjustMode, 1);
         }
-        if (!HAL_PIO__GetButtonState(BUTTON4)) {
+        if (!CheckButtonState(BUTTON4)) {
+            Sound__Beep(1000, 50);
             g_TimerAdjustMode = 10;
             Adjusting__AdjustParametr(&g_DataTime, g_AdjustMode, -1);
         }
