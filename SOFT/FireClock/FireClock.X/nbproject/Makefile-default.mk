@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../crypto/AES.s ../crypto/firmware_decoder.c ../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../graphics/draw.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../Peripferals/log_HAL.c ../screens/screens.c ../screens/screen_flame_clock.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../log.c ../images/clock1_100x100_L1.c ../screens/screen_analog_clock.c
+SOURCEFILES_QUOTED_IF_SPACED=../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../graphics/draw.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../images/clock1_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../Peripferals/log_HAL.c ../screens/screens.c ../screens/screen_flame_clock.c ../screens/screen_analog_clock.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../log.c ../adjusting.c ../sound.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1267346448/AES.o ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o ${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/455377414/draw.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/1037427530/log_HAL.o ${OBJECTDIR}/_ext/245878840/screens.o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/1472/log.o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1267346448/AES.o.d ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o.d ${OBJECTDIR}/_ext/2116421387/fonts.o.d ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o.d ${OBJECTDIR}/_ext/455377414/draw.o.d ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o.d ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o.d ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o.d ${OBJECTDIR}/_ext/1037427530/uart_HAL.o.d ${OBJECTDIR}/_ext/1037427530/spi_HAL.o.d ${OBJECTDIR}/_ext/1037427530/rtcc.o.d ${OBJECTDIR}/_ext/1037427530/log_HAL.o.d ${OBJECTDIR}/_ext/245878840/screens.o.d ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d ${OBJECTDIR}/_ext/1472/interrupts.o.d ${OBJECTDIR}/_ext/1472/main_fclock.o.d ${OBJECTDIR}/_ext/1472/delays.o.d ${OBJECTDIR}/_ext/1472/debugging.o.d ${OBJECTDIR}/_ext/1472/clock_task.o.d ${OBJECTDIR}/_ext/1472/display_utils.o.d ${OBJECTDIR}/_ext/1472/log.o.d ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/455377414/draw.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/1037427530/log_HAL.o ${OBJECTDIR}/_ext/245878840/screens.o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/1472/log.o ${OBJECTDIR}/_ext/1472/adjusting.o ${OBJECTDIR}/_ext/1472/sound.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2116421387/fonts.o.d ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o.d ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o.d ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o.d ${OBJECTDIR}/_ext/455377414/draw.o.d ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o.d ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o.d ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o.d ${OBJECTDIR}/_ext/1037427530/uart_HAL.o.d ${OBJECTDIR}/_ext/1037427530/spi_HAL.o.d ${OBJECTDIR}/_ext/1037427530/rtcc.o.d ${OBJECTDIR}/_ext/1037427530/log_HAL.o.d ${OBJECTDIR}/_ext/245878840/screens.o.d ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d ${OBJECTDIR}/_ext/1472/interrupts.o.d ${OBJECTDIR}/_ext/1472/main_fclock.o.d ${OBJECTDIR}/_ext/1472/delays.o.d ${OBJECTDIR}/_ext/1472/debugging.o.d ${OBJECTDIR}/_ext/1472/clock_task.o.d ${OBJECTDIR}/_ext/1472/display_utils.o.d ${OBJECTDIR}/_ext/1472/log.o.d ${OBJECTDIR}/_ext/1472/adjusting.o.d ${OBJECTDIR}/_ext/1472/sound.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1267346448/AES.o ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o ${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/455377414/draw.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/1037427530/log_HAL.o ${OBJECTDIR}/_ext/245878840/screens.o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/1472/log.o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o
+OBJECTFILES=${OBJECTDIR}/_ext/2116421387/fonts.o ${OBJECTDIR}/_ext/2116421387/m12_20_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Regular_12_L1.o ${OBJECTDIR}/_ext/2116421387/Antonio-Regular_16_L1.o ${OBJECTDIR}/_ext/2116421387/BebasNeue-Bold_16_L1.o ${OBJECTDIR}/_ext/2116421387/m12_16_L1.o ${OBJECTDIR}/_ext/455377414/draw.o ${OBJECTDIR}/_ext/1100913241/HelloWorld_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/blank_screens_100x100.o ${OBJECTDIR}/_ext/1100913241/Pepsi_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/flame_animation1_100x500_L1.o ${OBJECTDIR}/_ext/1100913241/artstrade_100x100_mono_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o ${OBJECTDIR}/_ext/1037427530/peripherals_map.o ${OBJECTDIR}/_ext/1037427530/peripherals_HAL.o ${OBJECTDIR}/_ext/1037427530/uart_HAL.o ${OBJECTDIR}/_ext/1037427530/spi_HAL.o ${OBJECTDIR}/_ext/1037427530/rtcc.o ${OBJECTDIR}/_ext/1037427530/log_HAL.o ${OBJECTDIR}/_ext/245878840/screens.o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o ${OBJECTDIR}/_ext/1472/interrupts.o ${OBJECTDIR}/_ext/1472/main_fclock.o ${OBJECTDIR}/_ext/1472/delays.o ${OBJECTDIR}/_ext/1472/debugging.o ${OBJECTDIR}/_ext/1472/clock_task.o ${OBJECTDIR}/_ext/1472/display_utils.o ${OBJECTDIR}/_ext/1472/log.o ${OBJECTDIR}/_ext/1472/adjusting.o ${OBJECTDIR}/_ext/1472/sound.o
 
 # Source Files
-SOURCEFILES=../crypto/AES.s ../crypto/firmware_decoder.c ../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../graphics/draw.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../Peripferals/log_HAL.c ../screens/screens.c ../screens/screen_flame_clock.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../log.c ../images/clock1_100x100_L1.c ../screens/screen_analog_clock.c
+SOURCEFILES=../fonts/fonts.c ../fonts/m12_20_L1.c ../fonts/BebasNeue-Regular_12_L1.c ../fonts/Antonio-Regular_16_L1.c ../fonts/BebasNeue-Bold_16_L1.c ../fonts/m12_16_L1.c ../graphics/draw.c ../images/HelloWorld_100x100_L1.c ../images/blank_screens_100x100.c ../images/Pepsi_100x100_L1.c ../images/flame_animation1_100x500_L1.c ../images/artstrade_100x100_mono_100x100_L1.c ../images/triden_100x100_L1.c ../images/clock1_100x100_L1.c ../Peripferals/peripherals_map.c ../Peripferals/peripherals_HAL.c ../Peripferals/uart_HAL.c ../Peripferals/spi_HAL.c ../Peripferals/rtcc.c ../Peripferals/log_HAL.c ../screens/screens.c ../screens/screen_flame_clock.c ../screens/screen_analog_clock.c ../interrupts.c ../main_fclock.c ../delays.c ../debugging.c ../clock_task.c ../display_utils.c ../log.c ../adjusting.c ../sound.c
 
 
 
@@ -95,12 +95,6 @@ MP_LINKER_FILE_OPTION=,--script=p24FJ128GA106.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1267346448/firmware_decoder.o: ../crypto/firmware_decoder.c  .generated_files/flags/default/dd4faf2ce86d65c448875b78d5c610d11b4cc121 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/1267346448" 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../crypto/firmware_decoder.c  -o ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1267346448/firmware_decoder.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/_ext/2116421387/fonts.o: ../fonts/fonts.c  .generated_files/flags/default/f36f32ada64666138d7426751ef01e8753e174f0 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/fonts.o.d 
@@ -179,6 +173,12 @@ ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o: ../images/triden_100x100_L1.c 
 	@${RM} ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../images/triden_100x100_L1.c  -o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o: ../images/clock1_100x100_L1.c  .generated_files/flags/default/f077fa142ebf65c1d3015ecf2c6c161535c7d314 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1100913241" 
+	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../images/clock1_100x100_L1.c  -o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/_ext/1037427530/peripherals_map.o: ../Peripferals/peripherals_map.c  .generated_files/flags/default/4b6f262d817b5d1091f03d5695e9766fb07d6716 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1037427530" 
 	@${RM} ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d 
@@ -227,6 +227,12 @@ ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o: ../screens/screen_flame_clock.
 	@${RM} ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_flame_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/_ext/245878840/screen_analog_clock.o: ../screens/screen_analog_clock.c  .generated_files/flags/default/79bdbce3d237c80b01b104f7a572235273d3353a .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_analog_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/_ext/1472/interrupts.o: ../interrupts.c  .generated_files/flags/default/517ffdab6ec3e9f56d72a5a28775dcbb78a3ead8 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/interrupts.o.d 
@@ -269,25 +275,19 @@ ${OBJECTDIR}/_ext/1472/log.o: ../log.c  .generated_files/flags/default/19ddbe697
 	@${RM} ${OBJECTDIR}/_ext/1472/log.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../log.c  -o ${OBJECTDIR}/_ext/1472/log.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/log.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o: ../images/clock1_100x100_L1.c  .generated_files/flags/default/f077fa142ebf65c1d3015ecf2c6c161535c7d314 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/1100913241" 
-	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../images/clock1_100x100_L1.c  -o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/_ext/1472/adjusting.o: ../adjusting.c  .generated_files/flags/default/596cc370954e430eb65eb270e64c44e0ef61f573 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/adjusting.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/adjusting.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../adjusting.c  -o ${OBJECTDIR}/_ext/1472/adjusting.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/adjusting.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/245878840/screen_analog_clock.o: ../screens/screen_analog_clock.c  .generated_files/flags/default/79bdbce3d237c80b01b104f7a572235273d3353a .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_analog_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/_ext/1472/sound.o: ../sound.c  .generated_files/flags/default/cbf8d0c196462e84e4f5b8df95d17719064f7e5e .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/sound.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/sound.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../sound.c  -o ${OBJECTDIR}/_ext/1472/sound.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/sound.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/_ext/1267346448/firmware_decoder.o: ../crypto/firmware_decoder.c  .generated_files/flags/default/9399c1b579b87d3c324d36d091e60874c6bc985d .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/1267346448" 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../crypto/firmware_decoder.c  -o ${OBJECTDIR}/_ext/1267346448/firmware_decoder.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1267346448/firmware_decoder.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/_ext/2116421387/fonts.o: ../fonts/fonts.c  .generated_files/flags/default/131d33463c344748b458abb6ed119feb03970944 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/2116421387" 
 	@${RM} ${OBJECTDIR}/_ext/2116421387/fonts.o.d 
@@ -366,6 +366,12 @@ ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o: ../images/triden_100x100_L1.c 
 	@${RM} ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../images/triden_100x100_L1.c  -o ${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1100913241/triden_100x100_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o: ../images/clock1_100x100_L1.c  .generated_files/flags/default/9c91a446d93c14b3f098071460ee37c400d7597e .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1100913241" 
+	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../images/clock1_100x100_L1.c  -o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/_ext/1037427530/peripherals_map.o: ../Peripferals/peripherals_map.c  .generated_files/flags/default/5537eb7b122651ebeb603a39c98db84c0f68aad8 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1037427530" 
 	@${RM} ${OBJECTDIR}/_ext/1037427530/peripherals_map.o.d 
@@ -414,6 +420,12 @@ ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o: ../screens/screen_flame_clock.
 	@${RM} ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_flame_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_flame_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_flame_clock.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/_ext/245878840/screen_analog_clock.o: ../screens/screen_analog_clock.c  .generated_files/flags/default/3330534948344a3c9ff35db53b555331375c3a4e .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_analog_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/_ext/1472/interrupts.o: ../interrupts.c  .generated_files/flags/default/d796a0257d21435bd3900be078dc6f9e69d1ec04 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/interrupts.o.d 
@@ -456,36 +468,24 @@ ${OBJECTDIR}/_ext/1472/log.o: ../log.c  .generated_files/flags/default/84fc4fb17
 	@${RM} ${OBJECTDIR}/_ext/1472/log.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../log.c  -o ${OBJECTDIR}/_ext/1472/log.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/log.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o: ../images/clock1_100x100_L1.c  .generated_files/flags/default/9c91a446d93c14b3f098071460ee37c400d7597e .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/1100913241" 
-	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../images/clock1_100x100_L1.c  -o ${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1100913241/clock1_100x100_L1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/_ext/1472/adjusting.o: ../adjusting.c  .generated_files/flags/default/253a9450a7b2c0ecf831dd75b9bebc7ed87a6cbb .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/adjusting.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/adjusting.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../adjusting.c  -o ${OBJECTDIR}/_ext/1472/adjusting.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/adjusting.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/245878840/screen_analog_clock.o: ../screens/screen_analog_clock.c  .generated_files/flags/default/3330534948344a3c9ff35db53b555331375c3a4e .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/245878840" 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../screens/screen_analog_clock.c  -o ${OBJECTDIR}/_ext/245878840/screen_analog_clock.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/245878840/screen_analog_clock.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/_ext/1472/sound.o: ../sound.c  .generated_files/flags/default/7107763262a501f446b8c9fa7014d4aef3f1c667 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/sound.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/sound.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../sound.c  -o ${OBJECTDIR}/_ext/1472/sound.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1472/sound.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1267346448/AES.o: ../crypto/AES.s  .generated_files/flags/default/85a0b2c079a7fc0e5d56e89854851a7c81f287e0 .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/1267346448" 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/AES.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/AES.o 
-	${MP_CC} $(MP_EXTRA_AS_PRE)  ../crypto/AES.s  -o ${OBJECTDIR}/_ext/1267346448/AES.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/_ext/1267346448/AES.o.d",--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_PK3=1,-g,--no-relax$(MP_EXTRA_AS_POST)  -mdfp="${DFP_DIR}/xc16"
-	
 else
-${OBJECTDIR}/_ext/1267346448/AES.o: ../crypto/AES.s  .generated_files/flags/default/589dcc308f76f7fc516d06ce10b61f52da0b123f .generated_files/flags/default/3a60306d929cd76682dbf87396049a279970adbd
-	@${MKDIR} "${OBJECTDIR}/_ext/1267346448" 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/AES.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1267346448/AES.o 
-	${MP_CC} $(MP_EXTRA_AS_PRE)  ../crypto/AES.s  -o ${OBJECTDIR}/_ext/1267346448/AES.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)    -Wa,-MD,"${OBJECTDIR}/_ext/1267346448/AES.o.d",--defsym=__MPLAB_BUILD=1,-g,--no-relax$(MP_EXTRA_AS_POST)  -mdfp="${DFP_DIR}/xc16"
-	
 endif
 
 # ------------------------------------------------------------------------------------

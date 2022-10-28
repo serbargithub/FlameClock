@@ -12,12 +12,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
-        <itemPath>../crypto/AES.h</itemPath>
-        <itemPath>../crypto/AES.s</itemPath>
-        <itemPath>../crypto/firmware_decoder.c</itemPath>
-        <itemPath>../crypto/firmware_decoder.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="fonts" displayName="fonts" projectFiles="true">
         <itemPath>../fonts/fonts.h</itemPath>
         <itemPath>../fonts/fonts.c</itemPath>
@@ -79,6 +73,10 @@
       <itemPath>../display_utils.h</itemPath>
       <itemPath>../log.h</itemPath>
       <itemPath>../log.c</itemPath>
+      <itemPath>../adjusting.h</itemPath>
+      <itemPath>../adjusting.c</itemPath>
+      <itemPath>../sound.h</itemPath>
+      <itemPath>../sound.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
