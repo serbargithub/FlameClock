@@ -13,7 +13,6 @@
 #include "clock_task.h"
 #include "display_utils.h"
 #include "log.h"
-#include "crypto/firmware_decoder.h"
 
 
 // PIC24FJ128GA106

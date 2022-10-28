@@ -1,6 +1,7 @@
 #include <p24Fxxxx.h>
 #include <string.h>
 #include "screen_flame_clock.h"
+#include "../adjusting.h"
 #include "../display_utils.h"
 #include "../fonts/fonts.h"
 
@@ -12,7 +13,7 @@ void ScreenDraw__FlameClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* data
     memset(displayFrame->data, 0xFF, sizeof (DisplayFrame_t));
     internalTimer++;
     if ((internalTimer & 0x0001)&& (adjustMode > AJUST_MODE__OFF)) {
-        AdjustFlameClockOne(displayFrame, dataTime, adjustMode);
+        Adjusting__ShowAdjustingParam(displayFrame, dataTime, adjustMode);
     } else {
         Font_SetCurrentFont(FONT_ANTONIO_REGULAR_SIZE16);
         Display_Printf(displayFrame, 15, 5, "Flame clock");
@@ -25,35 +26,11 @@ void ScreenDraw__FlameClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* data
     Display_Printf(displayFrame, 5, 83, "%s, %02i  %s  20%02i", WeekDay[dataTime->weekday], dataTime->day, Month[dataTime->month], dataTime->year);
 }
 
-void AdjustFlameClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime, AdjustingMode_t adjustMode) {
+static const int16_t  AdjustList[] ={AJUST_MODE__OFF, AJUST_MODE__HOURS, AJUST_MODE__MINUTES, AJUST_MODE__SECONDS, AJUST_MODE__WEEKS, AJUST_MODE__DAYS, AJUST_MODE__MONTHS, AJUST_MODE__YEARS};
+static AdjustingList_t FlameClockAdjustList;
 
-    Font_SetCurrentFont(FONT_ANTONIO_REGULAR_SIZE16);
-
-    switch (adjustMode) {
-        case AJUST_MODE__HOURS:
-            Display_Printf(displayFrame, 15, 5, "Adjust Hours!");
-            break;
-        case AJUST_MODE__MINUTES:
-            Display_Printf(displayFrame, 15, 5, "Adjust Minutes!");
-            break;
-        case AJUST_MODE__SECONDS:
-            Display_Printf(displayFrame, 15, 5, "Adjust Seconds!");
-            break;
-        case AJUST_MODE__WEEKS:
-            Display_Printf(displayFrame, 15, 5, "Adjust Weeks!");
-            break;
-        case AJUST_MODE__DAYS:
-            Display_Printf(displayFrame, 15, 5, "Adjust Days!");
-            break;
-        case AJUST_MODE__MONTHS:
-            Display_Printf(displayFrame, 15, 5, "Adjust Months!");
-            break;
-        case AJUST_MODE__YEARS:
-            Display_Printf(displayFrame, 15, 5, "Adjust Years!");
-            break;
-        default:
-            Display_Printf(displayFrame, 15, 5, "Adjust Finish!");
-            break;
-    }
-
+AdjustingList_t* GetAdjustList__FlameClockOne() {
+    FlameClockAdjustList.dataList = AdjustList;
+    FlameClockAdjustList.sizeOfList = sizeof(AdjustList) / sizeof(int16_t);
+    return &FlameClockAdjustList;
 }

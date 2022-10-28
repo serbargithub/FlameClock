@@ -12,6 +12,7 @@ bool Interrupt__DisableAll();
 void Interrupt__ShowFrame(DisplayFrame_t* displayFrame);
 bool Interrupt__IsFrameEnd();
 char Interrupt__GetUART1RX();
+void Interrupt__PlaySound(uint16_t freq, uint16_t time);
 
 #ifdef	__cplusplus
 }

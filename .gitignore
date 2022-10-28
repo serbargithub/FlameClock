@@ -14,6 +14,8 @@
 *.Zip
 *.LOG
 log
-SOFT/DMA-41.2Z.ver1.4/DMA41-2z.hxl
-SOFT/DMA-41.2Z.ver1.2/DMA41-2z.map
-/Demo_IR_Pult/IR_remoute.X
+DOC/
+SOFT/FireClock/FireClock.X/.generated_files/
+SOFT/FireClock/FireClock.X/build/
+PCB/FlameClock/Project Logs for FlameClock_1.1/
+PCB/FlameClock/Project Outputs for FlameClock_1.1/

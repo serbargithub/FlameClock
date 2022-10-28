@@ -12,6 +12,7 @@
 
 static DisplayFrame_t g_DisplayFrame;
 static bool g_EndOfFrameFlag;
+static uint16_t g_SoundTimeCounter;
 
 //================================================
 
@@ -49,6 +50,23 @@ void _ISR_PSV _T2Interrupt(void) //4000 Ãö
     _T2IF = 0;
 } //T2Interrupt
 
+//-----------------------------------------
+
+void _ISR_PSV _T3Interrupt(void) 
+{
+    if (g_SoundTimeCounter > 0) {
+        g_SoundTimeCounter --;
+        if (g_SoundTimeCounter & 0x0001) {
+            HAL_PIO__SetBuzzerOut(PIN_ON);
+        } else {
+            HAL_PIO__SetBuzzerOut(PIN_OFF);
+        }
+    } else {
+        HAL_PIO__SetBuzzerOut(PIN_OFF);
+    }
+    _T3IF = 0;
+} //T3Interrupt
+
 static char UART1_RX_Data;
 
 void _ISR_PSV _U1RXInterrupt(void) {
@@ -73,15 +91,20 @@ void Interrupt__Setup(void) {
 
     TMR1 = 0; // clear the timer
     TMR2 = 0; // clear the timer
+    TMR3 = 0; // clear the timer
     //PR1 = 1580 - 1; //16mHz 3200 - 1; // set the period register 2500 Hz 
     PR1 = 4740 - 1; //64 mHz 1580 - 1; //3200 - 1; // set the period register 2500 Hz 
     PR2 = 8000 - 1; // set the period register 1 kHz
+    PR3 = 8000 - 1; // set the period register 1 kHz
     T1CON = 0x8000; // enabled, prescaler 1:1, internal clock  
     T2CON = 0x8000; // enabled, prescaler 1:1, internal clock   system tick RTOS
+    T3CON = 0x8010; // enabled, prescaler 1:8, internal clock   system tick RTOS
     _T1IF = 0;
     _T2IF = 0;
+    _T3IF = 0;
     _T1IE = 1; //enable interrupt TMR1
-    _T2IE = 1; //enable interrupt TMR2
+    //_T2IE = 1; //enable interrupt TMR2
+    _T3IE = 1; //enable interrupt TMR3
 
     _U1RXIF = 0;
     _U1RXIE = 1;
@@ -115,3 +138,9 @@ char Interrupt__GetUART1RX() {
     return dataRead;
 }
 
+void Interrupt__PlaySound(uint16_t freq, uint16_t time) {
+#define TIMER3_CLOCK (32000000/8)
+#define SOUND_FREQ_CLOCK (TIMER3_CLOCK / 4)  
+    PR3 = SOUND_FREQ_CLOCK / (uint32_t)freq - 1; // set the period register Hz
+    g_SoundTimeCounter = (uint32_t)time * (uint32_t)freq / 250 ;
+}

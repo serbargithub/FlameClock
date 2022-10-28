@@ -6,6 +6,7 @@ extern "C" {
 #endif
 #include "../definitions.h" 
 
+AdjustingList_t* GetAdjustList__AnalogClockOne();    
 void ScreenInit__AnalogClockOne();
 void ScreenDraw__AnalogClockOne(DisplayFrame_t* displayFrame, RTCC_DATETIME* dataTime, AdjustingMode_t adjustMode);
 
